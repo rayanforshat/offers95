@@ -1,691 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض اليوم الوطني السعودي - الفرشاة كلينك</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-container">
-                <img src="logo.png" alt="الفرشاة كلينك" class="logo">
-                <h1 class="main-title">الفرشاة كلينك</h1>
-                <h2 class="subtitle">عروض اليوم الوطني السعودي 95</h2>
-                <div class="flag-decoration">
-                    <i class="fas fa-flag"></i>
-                    <span>🇸🇦</span>
-                    <i class="fas fa-flag"></i>
-                </div>
-            </div>
-        </header>
-
-        <div class="search-section">
-            <div class="search-container">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" id="searchInput" placeholder="ابحث عن الخدمة التي تريدها..." class="search-input">
-                <button id="clearSearch" class="clear-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-
-        <nav class="clinic-nav">
-            <button class="nav-btn active" data-clinic="dental">الأسنان</button>
-            <button class="nav-btn" data-clinic="dermatology">الجلدية والتجميل</button>
-            <button class="nav-btn" data-clinic="nutrition">التغذية</button>
-        </nav>
-
-        <main class="main-content">
-            <!-- Dental Services -->
-            <div class="clinic-section active" id="dental">
-                <h3 class="section-title">عروض الأسنان</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">الكشف عام</div>
-                        <div class="price-container">
-                            <span class="national-price">مجاناً</span>
-                        </div>
-                    </div>
-                    <div class="service-item no-offer">
-                        <div class="service-name">البانوراما</div>
-                        <div class="price-container">
-                            <span class="no-offer-text">لا يوجد عرض</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تنظيف الاسنان وإزالة الجير</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تبييض الأسنان</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">زراعة السن بدون التركيب</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">زراعة فك كامل</div>
-                        <div class="price-container">
-                            <span class="national-price">14995 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تركيبة زيركون</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابتسامة 16 سن</div>
-                        <div class="price-container">
-                            <span class="national-price">5495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item no-offer">
-                        <div class="service-name">ابتسامة 16 سن ثري دي</div>
-                        <div class="price-container">
-                            <span class="no-offer-text">لا يوجد عرض</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تركيب التقويم دفعة أولى</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">حشوات تبدأ من 200 ريال</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">علاج عصب تبدأ من 400</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">خلع عادي يبدأ من 200</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 195 ريال</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dermatology Services -->
-            <div class="clinic-section" id="dermatology">
-                <h3 class="section-title">عروض الجلدية والتجميل والليزر</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">جلسة تنظيف عميق مع ماسك مناسب للبشرة</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة هيدرافيشيال مع ماسك</div>
-                        <div class="price-container">
-                            <span class="national-price">259 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة الهيدرافيشيال الكورية للاشراقة و البشرة الزجاجية</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">هيدرافيشيال الملكي فيتامين سي</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">هيدرافيشيال الملكي للتفتيح والتجديد</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">هيدرافيشيال الملكي للبشرة الدهنية</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">هيدرافيشيال + ماسك السلمون + ديرما بن</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">هيدرافيشيال مميز للتفتيح + ديرما بن</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تشقير حواجب</div>
-                        <div class="price-container">
-                            <span class="national-price">59 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تشقير وجه</div>
-                        <div class="price-container">
-                            <span class="national-price">59 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تشقير منطقة واحدة</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item no-offer">
-                        <div class="service-name">تشقير وجه وحواجب</div>
-                        <div class="price-container">
-                            <span class="no-offer-text">لا يوجد عرض</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر تبييض منطقة واحدة</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">5 جلسات ليزر لتبييض منطقة</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر إزالة تاتو صغيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر إزالة تاتو متوسطة</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر إزالة تاتو كبيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فراكشنال منطقة صغيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فراكشنال منطقة متوسطة</div>
-                        <div class="price-container">
-                            <span class="national-price">695 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فراكشنال منطقة كبيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">895 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item no-offer">
-                        <div class="service-name">ليزر شنب للسيدات</div>
-                        <div class="price-container">
-                            <span class="no-offer-text">لا يوجد عرض</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر جسم كامل مع بطن وظهر + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر جسم كامل بدون ظهر وبطن + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات ليزر جسم كامل مع بطن وظهر + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">795 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر بيكيني أو إبطين او وجه + رتوش نساء</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر بطن + ظهر مع رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">159 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات ليزر بيكيني أو إبطين أو وجه (نساء)</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلستين ليزر ابطين للرجال او تحديد ذقن + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">159 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات إبطين رجال</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ليزر إبطين رجال + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ليزر تحديد ذقن رجال + رتوش</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر ازالة زوائد جلدية صغيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر ازالة زوائد جلدية متوسطة</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ليزر ازالة زوائد جلدية كبيرة</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد سايمل (منطقة الوجه)</div>
-                        <div class="price-container">
-                            <span class="national-price">695 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد سايمل (منطقة الوجه) مع الكريم</div>
-                        <div class="price-container">
-                            <span class="national-price">1495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد سايمل (منطقة الركب او الاكواع او اليدين)</div>
-                        <div class="price-container">
-                            <span class="national-price">695 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد سايمل (ظهر)</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة تذويب اللغلوغ</div>
-                        <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتوكس 50 وحدة</div>
-                        <div class="price-container">
-                            <span class="national-price">695 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتوكس تعرق الإبطين أو اليدين</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إذابة فيلر</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فيلر توسيال 1 مل</div>
-                        <div class="price-container">
-                            <span class="national-price">895 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فيلر 1 مل ارت فيلر</div>
-                        <div class="price-container">
-                            <span class="national-price">795 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">فيلر هيالورنيكا</div>
-                        <div class="price-container">
-                            <span class="national-price">795 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة تفتيح تحت العين</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة توريد الشفاه</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة محفزات الكولاجين</div>
-                        <div class="price-container">
-                            <span class="national-price">2395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة الكولاجين</div>
-                        <div class="price-container">
-                            <span class="national-price">1495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة الاكسوزوم</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة الراديس (نضارة اليدين) 1 مل</div>
-                        <div class="price-container">
-                            <span class="national-price">1395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة النضارة الياقوت</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة النضارة دوروثي</div>
-                        <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة السبع نجوم</div>
-                        <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة النضارة ديفا الذهبية</div>
-                        <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة السلمون (ابرة المناسبات)</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة النضارة ديفا لتفتيح التصبغات</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابرة النضارة ديفا العنبر</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">اكسوزم لايت للتفتيح وإزالة التصبغات 2.5 مل</div>
-                        <div class="price-container">
-                            <span class="national-price">759 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ديرمابن + ميزوثيرابي</div>
-                        <div class="price-container">
-                            <span class="national-price">259 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بلازما عادية للوجه او الشعر</div>
-                        <div class="price-container">
-                            <span class="national-price">459 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بلازما ذهبية الشعر</div>
-                        <div class="price-container">
-                            <span class="national-price">559 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بلازما ذهبية للوجه</div>
-                        <div class="price-container">
-                            <span class="national-price">559 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">اكسوزم فيتا 1 مل لعلاج الندبات</div>
-                        <div class="price-container">
-                            <span class="national-price">259 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item special-offer">
-                        <div class="service-name">ليزر فل بدي + رتوش + تنظيف بشرة كلاسيك + ماسك + تنظيف اسنان</div>
-                        <div class="price-container">
-                            <span class="national-price special">495 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
-                    <div class="service-item special-offer">
-                        <div class="service-name">ليزر اند ارم + تحديد ذقن + رتوش + تنظيف بشرة + ماسك + تنظيف اسنان</div>
-                        <div class="price-container">
-                            <span class="national-price special">395 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
-                    <div class="service-item special-offer">
-                        <div class="service-name">جلستين ليزر فل بدي +رتوش +بوتكس تعرق +1 مل ارت فيلر</div>
-                        <div class="price-container">
-                            <span class="national-price special">1595 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nutrition Services -->
-            <div class="clinic-section" id="nutrition">
-                <h3 class="section-title">عروض التغذية</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">قياس انبودي + كشف</div>
-                        <div class="price-container">
-                            <span class="national-price">49 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">كشف</div>
-                        <div class="price-container">
-                            <span class="national-price">مجاناً</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                    <div class="service-item">
-                        <div class="service-name">جلسة لايبوسل والثانية ب 95</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">4 جلسات لايبوسل تنحيف امن وفعال</div>
-                        <div class="price-container">
-                            <span class="national-price">895 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">8 جلسات لايبوسل تنحيف امن وفعال</div>
-                        <div class="price-container">
-                            <span class="national-price">1695 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة التغذية الخاصة بالفرشاة</div>
-                        <div class="service-desc">نظام لمدة 3 شهور+تصميم حمية خاصة +متابعة يومية اونلاين+ زيارة كل اسبوعين في العيادة +ارفاق ملفات ارشادية+تطبيق رياضي+التوعية والتعليم على الغذاء السليم في كل جلسة+هدية احضار شخص لتجربة استشارة</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة متابعة فقر الدم</div>
-                        <div class="service-desc">زيارتين قياس Inbody +تحليل مخزون الحديد+تحليل صورة دم +تحليل نسبة الحديد</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تساقط الشعر</div>
-                        <div class="service-desc">نظام غذائي+تحليل صورة الدم +تحليل نسبة الحديد +تحليل مخزون الحديد+تحليل نسبة الزنك+تحليل هرمون الغدة الدرقية+ تحليل فيتامين دال+تحليل فيتامين B12</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة الغدة الدرقية</div>
-                        <div class="service-desc">نظام غذائي+متابعة +قياس انبودي+تحليل T3+تحليل T4+تحليل TSH</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة التغذية المتكاملة اونلاين</div>
-                        <div class="service-desc">مدة 3 شهور الكشفية اونلاين +قراءة التحاليل + متابعة اونلاين اتصال اسبوعيا +جدول غذائي وخطة علاجية + ملف وصفات صحية</div>
-                        <div class="price-container">
-                            <span class="national-price">295 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تكيس المبايض</div>
-                        <div class="service-desc">نظام غذائي + متابعة يومية اونلاين لمدة شهر + تحليل FSH+ تحليل LH+تحليل برولاكتين</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة ابر التنحيف</div>
-                        <div class="service-desc">نظام غذائي+تحليلCBC+تحليل VD+تحليل TSH+تحليلFERRITIN+ تحليلVB12+تحليل انزيمات الكبد+تحليل وظائف الكلى</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تحليل البصمة الغذائية + نظام غذائي + قياس IN BODY+متابعة +كشف</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <div class="note-section">
-            <div class="note-card national-day">
-                <i class="fas fa-star note-icon"></i>
-                <p class="note-text">عروض محدودة بمناسبة اليوم الوطني السعودي 95 - صالحة حتى نفاد الكمية</p>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h3 class="contact-title">احجز موعدك الآن</h3>
-            <div class="contact-buttons">
-                <a href="tel:0148134516" class="contact-btn call-btn">
-                    <i class="fas fa-phone"></i>
-                    <span>اتصل الآن</span>
-                    <span class="phone-number">0148134516</span>
-                </a>
-                <a href="https://wa.me/966148134516" target="_blank" class="contact-btn whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>واتساب</span>
-                    <span class="phone-number">0148134516</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Social Media Section -->
-        <div class="social-section">
-            <h3 class="social-title">تابعونا على</h3>
-            <div class="social-icons">
-                <a href="https://maps.app.goo.gl/XJWvSYfxTUGmDVRn9" target="_blank" class="social-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </a>
-                <a href="https://www.instagram.com/furshaat/" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@furshaat" target="_blank" class="social-icon">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.facebook.com/furshaat" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.youtube.com/@furshaat" target="_blank" class="social-icon">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://x.com/furshaat" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://snapchat.com/t/9Cml14df" target="_blank" class="social-icon">
-                    <i class="fab fa-snapchat"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
