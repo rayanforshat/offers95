@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #0d7733, #ffffff, #0d7733);
+    background: linear-gradient(135deg, #00343a, #f5f5f5, #b99462);
     background-size: 400% 400%;
-    animation: saudiGradient 8s ease-in-out infinite;
+    animation: brandGradient 8s ease-in-out infinite;
     line-height: 1.6;
     direction: rtl;
     min-height: 100vh;
 }
 
-@keyframes saudiGradient {
+@keyframes brandGradient {
     0%, 100% {
         background-position: 0% 50%;
     }
@@ -29,29 +29,16 @@ body {
     padding: 20px;
 }
 
-/* Header Styles */
 .header {
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #0d7733, #ffffff);
+    background: linear-gradient(135deg, #00343a, #b99462);
     padding: 40px 20px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #0d7733;
+    border: 3px solid #b99462;
     position: relative;
     overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-    opacity: 0.3;
-    z-index: 1;
 }
 
 .logo-container {
@@ -70,34 +57,20 @@ body {
 
 .main-title {
     font-size: 2.5rem;
-    color: #0d7733;
+    color: #b99462;
     font-weight: 700;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
     font-size: 1.4rem;
-    color: #0d7733;
+    color: white;
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     margin-bottom: 15px;
 }
 
-.flag-decoration {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    color: #0d7733;
-}
-
-.flag-decoration span {
-    font-size: 2rem;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-/* Search Section */
 .search-section {
     margin-bottom: 30px;
     display: flex;
@@ -115,7 +88,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #0d7733;
+    color: #00343a;
     font-size: 1.2rem;
     z-index: 2;
 }
@@ -123,18 +96,18 @@ body {
 .search-input {
     width: 100%;
     padding: 15px 50px 15px 50px;
-    border: 3px solid #0d7733;
+    border: 3px solid #b99462;
     border-radius: 25px;
     font-size: 1.1rem;
     font-family: 'Cairo', sans-serif;
     background: white;
-    box-shadow: 0 4px 15px rgba(13, 119, 51, 0.1);
+    box-shadow: 0 4px 15px rgba(185, 148, 98, 0.2);
     transition: all 0.3s ease;
 }
 
 .search-input:focus {
     outline: none;
-    box-shadow: 0 8px 25px rgba(13, 119, 51, 0.2);
+    box-shadow: 0 8px 25px rgba(185, 148, 98, 0.3);
     transform: translateY(-2px);
 }
 
@@ -158,10 +131,9 @@ body {
 }
 
 .clear-btn:hover {
-    color: #0d7733;
+    color: #00343a;
 }
 
-/* Navigation Styles */
 .clinic-nav {
     display: flex;
     justify-content: center;
@@ -172,8 +144,8 @@ body {
 
 .nav-btn {
     background: white;
-    border: 3px solid #0d7733;
-    color: #0d7733;
+    border: 3px solid #b99462;
+    color: #00343a;
     padding: 15px 30px;
     border-radius: 25px;
     font-size: 1.1rem;
@@ -182,40 +154,22 @@ body {
     transition: all 0.3s ease;
     font-family: 'Cairo', sans-serif;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.nav-btn:hover::before {
-    left: 100%;
 }
 
 .nav-btn:hover {
-    background: #0d7733;
-    color: white;
+    background: linear-gradient(135deg, #00343a, #004d56);
+    color: #b99462;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
 }
 
 .nav-btn.active {
-    background: #0d7733;
-    border-color: #0d7733;
-    color: white;
+    background: linear-gradient(135deg, #00343a, #004d56);
+    border-color: #b99462;
+    color: #b99462;
     transform: translateY(-3px);
 }
 
-/* Section Styles */
 .clinic-section {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
@@ -238,14 +192,13 @@ body {
 
 .section-title {
     font-size: 2rem;
-    color: #0d7733;
+    color: #00343a;
     text-align: center;
     margin-bottom: 30px;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Services Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -259,50 +212,19 @@ body {
     padding: 25px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border-right: 5px solid #0d7733;
+    border-right: 5px solid #b99462;
     position: relative;
     overflow: hidden;
 }
 
-.service-item::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(13, 119, 51, 0.05) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.service-item:hover::before {
-    opacity: 1;
-}
-
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(13, 119, 51, 0.15);
-}
-
-.service-item.no-offer {
-    border-right-color: #ccc;
-    opacity: 0.6;
-}
-
-.service-item.no-offer:hover {
-    transform: none;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.service-item.special-offer {
-    border-right-color: gold;
-    background: linear-gradient(135deg, #fff9e6, #ffffff);
+    box-shadow: 0 10px 30px rgba(0, 52, 58, 0.15);
 }
 
 .service-item.package-item {
-    border-right-color: #0d7733;
-    background: linear-gradient(135deg, #f0f8f0, #ffffff);
+    border-right-color: #00343a;
+    background: linear-gradient(135deg, #f0f8f8, #ffffff);
 }
 
 .service-name {
@@ -311,8 +233,6 @@ body {
     color: #333;
     margin-bottom: 15px;
     line-height: 1.5;
-    position: relative;
-    z-index: 2;
 }
 
 .service-desc {
@@ -325,46 +245,31 @@ body {
 
 .price-container {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    position: relative;
-    z-index: 2;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.national-price {
-    font-size: 1.5rem;
-    color: #0d7733;
+.original-price {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.offer-price {
+    font-size: 1.6rem;
+    color: #b99462;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.national-price.special {
-    color: gold;
-    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
+.free-price {
     font-size: 1.6rem;
-}
-
-.no-offer-text {
-    font-size: 1.1rem;
-    color: #999;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.special-badge {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    background: linear-gradient(45deg, gold, #ffd700);
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    color: #00343a;
     font-weight: 700;
-    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
 }
 
-/* Note Section */
 .note-section {
     margin: 40px 0;
     display: flex;
@@ -372,31 +277,21 @@ body {
 }
 
 .note-card {
-    background: linear-gradient(135deg, #0d7733, #16a045);
+    background: linear-gradient(135deg, #00343a, #004d56);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
     max-width: 800px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border: 2px solid white;
-}
-
-.note-card.national-day {
-    background: linear-gradient(135deg, #0d7733, #ffffff, #0d7733);
-    color: #0d7733;
+    border: 2px solid #b99462;
 }
 
 .note-icon {
     font-size: 2rem;
-    color: white;
+    color: #b99462;
     flex-shrink: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.note-card.national-day .note-icon {
-    color: #0d7733;
 }
 
 .note-text {
@@ -404,15 +299,8 @@ body {
     color: white;
     font-weight: 600;
     line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.note-card.national-day .note-text {
-    color: #0d7733;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
 .contact-section {
     text-align: center;
     margin: 40px 0;
@@ -420,15 +308,14 @@ body {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #0d7733;
+    border: 3px solid #b99462;
 }
 
 .contact-title {
     font-size: 2rem;
-    color: #0d7733;
+    color: #00343a;
     margin-bottom: 30px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-buttons {
@@ -450,35 +337,18 @@ body {
     font-size: 1.2rem;
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
     min-width: 200px;
 }
 
-.contact-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.contact-btn:hover::before {
-    left: 100%;
-}
-
 .call-btn {
-    background: linear-gradient(135deg, #0d7733, #16a045);
-    color: white;
-    border: 3px solid #0d7733;
+    background: linear-gradient(135deg, #00343a, #004d56);
+    color: #b99462;
+    border: 3px solid #b99462;
 }
 
 .call-btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(13, 119, 51, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 52, 58, 0.3);
 }
 
 .whatsapp-btn {
@@ -495,7 +365,6 @@ body {
 .contact-btn i {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn span:first-of-type {
@@ -510,20 +379,6 @@ body {
     direction: ltr;
 }
 
-/* Pulse animation for contact buttons */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Social Media Section */
 .social-section {
     text-align: center;
     margin-top: 50px;
@@ -531,12 +386,12 @@ body {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #0d7733;
+    border: 3px solid #b99462;
 }
 
 .social-title {
     font-size: 1.8rem;
-    color: #0d7733;
+    color: #00343a;
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -554,8 +409,8 @@ body {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #0d7733, #16a045);
-    color: white;
+    background: linear-gradient(135deg, #00343a, #004d56);
+    color: #b99462;
     border-radius: 50%;
     font-size: 1.5rem;
     text-decoration: none;
@@ -565,27 +420,15 @@ body {
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
 }
 
-/* Search highlight */
 .highlight {
     background: linear-gradient(120deg, #fff3cd, #fff3cd);
     padding: 2px 4px;
     border-radius: 3px;
-    animation: highlightPulse 2s ease-in-out infinite;
 }
 
-@keyframes highlightPulse {
-    0%, 100% {
-        background: linear-gradient(120deg, #fff3cd, #fff3cd);
-    }
-    50% {
-        background: linear-gradient(120deg, #ffeaa7, #ffeaa7);
-    }
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -616,21 +459,6 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
-    .social-icons {
-        gap: 15px;
-    }
-    
-    .social-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
-    
-    .search-input {
-        padding: 12px 45px;
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -638,47 +466,9 @@ body {
         font-size: 1.8rem;
     }
     
-    .logo {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .clinic-nav {
-        gap: 10px;
-    }
-    
-    .nav-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .flag-decoration {
-        font-size: 1.2rem;
-    }
-    
-    .flag-decoration span {
-        font-size: 1.5rem;
-    }
-    
-    .contact-buttons {
-        gap: 15px;
-    }
-    
     .contact-btn {
         min-width: 150px;
         padding: 20px 25px;
-        font-size: 1rem;
-    }
-    
-    .contact-btn i {
-        font-size: 2rem;
-    }
-    
-    .contact-btn span:first-of-type {
-        font-size: 1.1rem;
-    }
-    
-    .phone-number {
         font-size: 1rem;
     }
 }
