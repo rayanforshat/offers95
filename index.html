@@ -3,685 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض اليوم الوطني السعودي - الفرشاة كلينك</title>
+    <title>عروض أكتوبر - الفرشاة كلينك</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #0d7733, #ffffff, #0d7733);
-            background-size: 400% 400%;
-            animation: saudiGradient 8s ease-in-out infinite;
-            line-height: 1.6;
-            direction: rtl;
-            min-height: 100vh;
-        }
-
-        @keyframes saudiGradient {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header Styles */
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #0d7733, #ffffff);
-            padding: 40px 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 3px solid #0d7733;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-            opacity: 0.3;
-            z-index: 1;
-        }
-
-        .logo-container {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .main-title {
-            font-size: 2.5rem;
-            color: #0d7733;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .subtitle {
-            font-size: 1.4rem;
-            color: #0d7733;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-        }
-
-        .flag-decoration {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            color: #0d7733;
-        }
-
-        .flag-decoration span {
-            font-size: 2rem;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        /* Search Section */
-        .search-section {
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #0d7733;
-            font-size: 1.2rem;
-            z-index: 2;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 15px 50px 15px 50px;
-            border: 3px solid #0d7733;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-family: 'Cairo', sans-serif;
-            background: white;
-            box-shadow: 0 4px 15px rgba(13, 119, 51, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .search-input:focus {
-            outline: none;
-            box-shadow: 0 8px 25px rgba(13, 119, 51, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .clear-btn {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 5px;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .clear-btn.show {
-            opacity: 1;
-        }
-
-        .clear-btn:hover {
-            color: #0d7733;
-        }
-
-        /* Navigation Styles */
-        .clinic-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .nav-btn {
-            background: white;
-            border: 3px solid #0d7733;
-            color: #0d7733;
-            padding: 15px 30px;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Cairo', sans-serif;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .nav-btn:hover::before {
-            left: 100%;
-        }
-
-        .nav-btn:hover {
-            background: #0d7733;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
-        }
-
-        .nav-btn.active {
-            background: #0d7733;
-            border-color: #0d7733;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Section Styles */
-        .clinic-section {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .clinic-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #0d7733;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .service-item {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-right: 5px solid #0d7733;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-item::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(13, 119, 51, 0.05) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-item:hover::before {
-            opacity: 1;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(13, 119, 51, 0.15);
-        }
-
-        .service-item.special-offer {
-            border-right-color: gold;
-            background: linear-gradient(135deg, #fff9e6, #ffffff);
-        }
-
-        .service-item.package-item {
-            border-right-color: #0d7733;
-            background: linear-gradient(135deg, #f0f8f0, #ffffff);
-        }
-
-        .service-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-            line-height: 1.5;
-            position: relative;
-            z-index: 2;
-        }
-
-        .service-desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.4;
-            font-style: italic;
-        }
-
-        .price-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .national-price {
-            font-size: 1.5rem;
-            color: #0d7733;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .national-price.special {
-            color: gold;
-            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
-            font-size: 1.6rem;
-        }
-
-        .special-badge {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            background: linear-gradient(45deg, gold, #ffd700);
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
-        }
-
-        /* Note Section */
-        .note-section {
-            margin: 40px 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .note-card {
-            background: linear-gradient(135deg, #0d7733, #16a045);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
-            max-width: 800px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border: 2px solid white;
-        }
-
-        .note-card.national-day {
-            background: linear-gradient(135deg, #0d7733, #ffffff, #0d7733);
-            color: #0d7733;
-        }
-
-        .note-icon {
-            font-size: 2rem;
-            color: white;
-            flex-shrink: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .note-card.national-day .note-icon {
-            color: #0d7733;
-        }
-
-        .note-text {
-            font-size: 1.2rem;
-            color: white;
-            font-weight: 600;
-            line-height: 1.6;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .note-card.national-day .note-text {
-            color: #0d7733;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            text-align: center;
-            margin: 40px 0;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 3px solid #0d7733;
-        }
-
-        .contact-title {
-            font-size: 2rem;
-            color: #0d7733;
-            margin-bottom: 30px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 25px 35px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-            min-width: 200px;
-        }
-
-        .contact-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .contact-btn:hover::before {
-            left: 100%;
-        }
-
-        .call-btn {
-            background: linear-gradient(135deg, #0d7733, #16a045);
-            color: white;
-            border: 3px solid #0d7733;
-        }
-
-        .call-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(13, 119, 51, 0.3);
-        }
-
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: white;
-            border: 3px solid #25d366;
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
-        }
-
-        .contact-btn i {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-btn span:first-of-type {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .phone-number {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 600;
-            direction: ltr;
-        }
-
-        /* Social Media Section */
-        .social-section {
-            text-align: center;
-            margin-top: 50px;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 3px solid #0d7733;
-        }
-
-        .social-title {
-            font-size: 1.8rem;
-            color: #0d7733;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #0d7733, #16a045);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(13, 119, 51, 0.3);
-        }
-
-        /* Search highlight */
-        .highlight {
-            background: linear-gradient(120deg, #fff3cd, #fff3cd);
-            padding: 2px 4px;
-            border-radius: 3px;
-            animation: highlightPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes highlightPulse {
-            0%, 100% {
-                background: linear-gradient(120deg, #fff3cd, #fff3cd);
-            }
-            50% {
-                background: linear-gradient(120deg, #ffeaa7, #ffeaa7);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .main-title {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-btn {
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-            
-            .service-item {
-                padding: 20px;
-            }
-            
-            .note-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .social-icons {
-                gap: 15px;
-            }
-            
-            .social-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-            
-            .search-input {
-                padding: 12px 45px;
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-title {
-                font-size: 1.8rem;
-            }
-            
-            .logo {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .clinic-nav {
-                gap: 10px;
-            }
-            
-            .nav-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-            
-            .flag-decoration {
-                font-size: 1.2rem;
-            }
-            
-            .flag-decoration span {
-                font-size: 1.5rem;
-            }
-            
-            .contact-buttons {
-                gap: 15px;
-            }
-            
-            .contact-btn {
-                min-width: 150px;
-                padding: 20px 25px;
-                font-size: 1rem;
-            }
-            
-            .contact-btn i {
-                font-size: 2rem;
-            }
-            
-            .contact-btn span:first-of-type {
-                font-size: 1.1rem;
-            }
-            
-            .phone-number {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="logo.png" alt="الفرشاة كلينك" class="logo">
+                    <img src="logo.png" alt="الفرشاة كلينك" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <h1 class="main-title">الفرشاة كلينك</h1>
-                <h2 class="subtitle">عروض اليوم الوطني السعودي 95</h2>
-                <div class="flag-decoration">
-                    <i class="fas fa-flag"></i>
-                    <span>🇸🇦</span>
-                    <i class="fas fa-flag"></i>
-                </div>
+                <h2 class="subtitle">عروض أكتوبر الحصرية</h2>
             </div>
         </header>
 
@@ -696,506 +33,493 @@
         </div>
 
         <nav class="clinic-nav">
-            <button class="nav-btn active" data-clinic="dental">الأسنان</button>
-            <button class="nav-btn" data-clinic="dermatology">الجلدية والتجميل</button>
+            <button class="nav-btn active" data-clinic="dermatology">الجلدية والتجميل</button>
             <button class="nav-btn" data-clinic="nutrition">التغذية</button>
+            <button class="nav-btn" data-clinic="dental">الأسنان</button>
         </nav>
 
         <main class="main-content">
-            <!-- Dental Services -->
-            <div class="clinic-section active" id="dental">
-                <h3 class="section-title">عروض الأسنان</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">الكشف عام</div>
-                        <div class="price-container">
-                            <span class="national-price">مجاناً</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تنظيف الاسنان وإزالة الجير</div>
-                        <div class="price-container">
-                            <span class="national-price">95 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تبييض الأسنان</div>
-                        <div class="price-container">
-                            <span class="national-price">395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">زراعة السن بدون التركيب</div>
-                        <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">زراعة فك كامل</div>
-                        <div class="price-container">
-                            <span class="national-price">14995 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تركيبة زيركون</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابتسامة 16 سن</div>
-                        <div class="price-container">
-                            <span class="national-price">5495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تركيب التقويم دفعة أولى</div>
-                        <div class="price-container">
-                            <span class="national-price">495 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">حشوات تبدأ من 200 ريال</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 195 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">علاج عصب تبدأ من 400</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 395 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">خلع عادي يبدأ من 200</div>
-                        <div class="price-container">
-                            <span class="national-price">تبدأ من 195 ريال</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Dermatology Services -->
-            <div class="clinic-section" id="dermatology">
+            <div class="clinic-section active" id="dermatology">
                 <h3 class="section-title">عروض الجلدية والتجميل والليزر</h3>
                 <div class="services-grid">
-                    <!-- باقة البوتكس -->
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة البوتكس</div>
-                        <div class="service-desc">بوتكس وجه + ابرة تفتيح الهالات + ديرما بن + جلسة تنظيف بشرة + جلسة ليزر فل بدي مع الرتوش + تشقير حواجب</div>
-                        <div class="price-container">
-                            <span class="national-price">995 ريال</span>
-                        </div>
-                    </div>
-
-                    <!-- باقة النضارة -->
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة النضارة</div>
-                        <div class="service-desc">إبرة النضاره + ديرما بن + جلسة تنظيف بشرة + جلسة ليزر فل بدي مع الرتوش + تشقير حواجب</div>
-                        <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
-                        </div>
-                    </div>
-
-                    <!-- تنظيف بشرة + ماسك -->
-                    <div class="service-item">
-                        <div class="service-name">تنظيف بشرة + ماسك</div>
-                        <div class="price-container">
-                            <span class="national-price">115 ريال</span>
-                        </div>
-                    </div>
-
-                    <div class="service-item special-offer">
-                        <div class="service-name">ليزر فل بدي + رتوش + تنظيف بشرة كلاسيك + ماسك + تنظيف اسنان - باقة الرجل</div>
-                        <div class="price-container">
-                            <span class="national-price special">495 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
-                    <div class="service-item special-offer">
-                        <div class="service-name">ليزر اند ارم + تحديد ذقن + رتوش + تنظيف بشرة + ماسك + تنظيف اسنان - باقة المرأة</div>
-                        <div class="price-container">
-                            <span class="national-price special">395 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
-                    <div class="service-item special-offer">
-                        <div class="service-name">جلستين ليزر فل بدي +رتوش +بوتكس تعرق +1 مل ارت فيلر</div>
-                        <div class="price-container">
-                            <span class="national-price special">1595 ريال</span>
-                            <div class="special-badge">عرض خاص</div>
-                        </div>
-                    </div>
                     <div class="service-item">
                         <div class="service-name">جلسة تنظيف عميق مع ماسك مناسب للبشرة</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">149 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">جلسة هيدرافيشيال مع ماسك</div>
                         <div class="price-container">
-                            <span class="national-price">259 ريال</span>
+                            <span class="original-price">800 ريال</span>
+                            <span class="offer-price">220 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">جلسة الهيدرافيشيال الكورية للاشراقة و البشرة الزجاجية</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">900 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">هيدرافيشيال الملكي فيتامين سي</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">900 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">هيدرافيشيال الملكي للتفتيح والتجديد</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">900 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">هيدرافيشيال الملكي للبشرة الدهنية</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">900 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">هيدرافيشيال + ماسك السلمون + ديرما بن</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1200 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">هيدرافيشيال مميز للتفتيح + ديرما بن</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1200 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تشقير حواجب</div>
                         <div class="price-container">
-                            <span class="national-price">59 ريال</span>
+                            <span class="original-price">160 ريال</span>
+                            <span class="offer-price">79 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تشقير وجه</div>
                         <div class="price-container">
-                            <span class="national-price">59 ريال</span>
+                            <span class="original-price">200 ريال</span>
+                            <span class="offer-price">99 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تشقير منطقة واحدة</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">300 ريال</span>
+                            <span class="offer-price">149 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">تشقير وجه وحواجب</div>
+                        <div class="price-container">
+                            <span class="original-price">350 ريال</span>
+                            <span class="offer-price">149 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر تبييض منطقة واحدة</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">300 ريال</span>
+                            <span class="offer-price">99 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">5 جلسات ليزر لتبييض منطقة</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر إزالة تاتو صغيرة</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر إزالة تاتو متوسطة</div>
                         <div class="price-container">
-                            <span class="national-price">295 ريال</span>
+                            <span class="original-price">800 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر إزالة تاتو كبيرة</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">فراكشنال منطقة صغيرة</div>
                         <div class="price-container">
-                            <span class="national-price">295 ريال</span>
+                            <span class="original-price">800 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فراكشنال منطقة متوسطة</div>
+                        <div class="service-name">فراكشنال منطقة متوسطة - او نصف ظهر</div>
                         <div class="price-container">
-                            <span class="national-price">695 ريال</span>
+                            <span class="original-price">1600 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فراكشنال منطقة كبيرة</div>
+                        <div class="service-name">فراكشنال منطقة كبيرة - او ظهر كامل</div>
                         <div class="price-container">
-                            <span class="national-price">895 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">699 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">ليزر شنب للسيدات</div>
+                        <div class="price-container">
+                            <span class="original-price">100 ريال</span>
+                            <span class="offer-price">79 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر جسم كامل مع بطن وظهر + رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">295 ريال</span>
+                            <span class="original-price">700 ريال</span>
+                            <span class="offer-price">349 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر جسم كامل بدون ظهر وبطن + رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">249 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">3 جلسات ليزر جسم كامل مع بطن وظهر + رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">795 ريال</span>
+                            <span class="original-price">1900 ريال</span>
+                            <span class="offer-price">899 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">3 جلسات ليزر جسم كامل بدون بطن وظهر + رتوش (ميني بدي)</div>
+                        <div class="price-container">
+                            <span class="original-price">1300 ريال</span>
+                            <span class="offer-price">699 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">6 جلسات ليزر جسم كامل مع بطن وظهر + رتوش</div>
+                        <div class="price-container">
+                            <span class="original-price">3700 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">6 جلسات ليزر جسم كامل بدون بطن وظهر + رتوش</div>
+                        <div class="price-container">
+                            <span class="original-price">2500 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر بيكيني أو إبطين او وجه + رتوش نساء</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">300 ريال</span>
+                            <span class="offer-price">99 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر بطن + ظهر مع رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">159 ريال</span>
+                            <span class="offer-price">150 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">3 جلسات ليزر بيكيني أو إبطين أو وجه (نساء)</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">249 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">جلستين ليزر ابطين للرجال او تحديد ذقن + رتوش</div>
+                        <div class="service-name">3 جلسات ليزر تحديد ذقن او اندر ارم رجال</div>
                         <div class="price-container">
-                            <span class="national-price">159 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات إبطين رجال</div>
-                        <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">جلسة ليزر إبطين رجال + رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">200 ريال</span>
+                            <span class="offer-price">150 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">جلسة ليزر تحديد ذقن رجال + رتوش</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">200 ريال</span>
+                            <span class="offer-price">150 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر ازالة زوائد جلدية صغيرة</div>
                         <div class="price-container">
-                            <span class="national-price">95 ريال</span>
+                            <span class="original-price">300 ريال</span>
+                            <span class="offer-price">149 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر ازالة زوائد جلدية متوسطة</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ليزر ازالة زوائد جلدية كبيرة</div>
                         <div class="price-container">
-                            <span class="national-price">295 ريال</span>
+                            <span class="original-price">700 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تقشير بارد سايمل (منطقة الوجه)</div>
                         <div class="price-container">
-                            <span class="national-price">695 ريال</span>
+                            <span class="original-price">1800 ريال</span>
+                            <span class="offer-price">799 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تقشير بارد سايمل (منطقة الوجه) مع الكريم</div>
                         <div class="price-container">
-                            <span class="national-price">1495 ريال</span>
+                            <span class="original-price">1800 ريال</span>
+                            <span class="offer-price">1699 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تقشير بارد سايمل (منطقة الركب او الاكواع او اليدين)</div>
                         <div class="price-container">
-                            <span class="national-price">695 ريال</span>
+                            <span class="original-price">1600 ريال</span>
+                            <span class="offer-price">799 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">تقشير بارد سايمل (ظهر)</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2800 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة تذويب اللغلوغ</div>
                         <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
+                            <span class="original-price">3000 ريال</span>
+                            <span class="offer-price">1399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">بوتوكس 50 وحدة</div>
                         <div class="price-container">
-                            <span class="national-price">695 ريال</span>
+                            <span class="original-price">1500 ريال</span>
+                            <span class="offer-price">799 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">بوتوكس تعرق الإبطين أو اليدين</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2400 ريال</span>
+                            <span class="offer-price">1299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">إذابة فيلر</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">500 ريال</span>
+                            <span class="offer-price">199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">فيلر توسيال 1 مل</div>
                         <div class="price-container">
-                            <span class="national-price">895 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">999 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">فيلر 1 مل ارت فيلر</div>
                         <div class="price-container">
-                            <span class="national-price">795 ريال</span>
+                            <span class="original-price">1800 ريال</span>
+                            <span class="offer-price">899 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">فيلر هيالورنيكا</div>
                         <div class="price-container">
-                            <span class="national-price">795 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">899 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">جلسة تفتيح تحت العين</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">900 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">إبرة توريد الشفاه</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">1000 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة محفزات الكولاجين</div>
                         <div class="price-container">
-                            <span class="national-price">2395 ريال</span>
+                            <span class="original-price">5000 ريال</span>
+                            <span class="offer-price">2499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة الكولاجين</div>
                         <div class="price-container">
-                            <span class="national-price">1495 ريال</span>
+                            <span class="original-price">3000 ريال</span>
+                            <span class="offer-price">1499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة الاكسوزوم</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">3000 ريال</span>
+                            <span class="offer-price">1299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">إبرة الراديس (نضارة اليدين) 1 مل</div>
                         <div class="price-container">
-                            <span class="national-price">1395 ريال</span>
+                            <span class="original-price">3000 ريال</span>
+                            <span class="offer-price">1399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة النضارة الياقوت</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2400 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة النضارة دوروثي</div>
                         <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
+                            <span class="original-price">2400 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة السبع نجوم</div>
                         <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
+                            <span class="original-price">3000 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة النضارة ديفا الذهبية</div>
                         <div class="price-container">
-                            <span class="national-price">1295 ريال</span>
+                            <span class="original-price">4000 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">إبرة السلمون (ابرة المناسبات)</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة النضارة ديفا لتفتيح التصبغات</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2600 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ابرة النضارة ديفا العنبر</div>
                         <div class="price-container">
-                            <span class="national-price">1195 ريال</span>
+                            <span class="original-price">2200 ريال</span>
+                            <span class="offer-price">1199 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">اكسوزم لايت للتفتيح وإزالة التصبغات 2.5 مل</div>
                         <div class="price-container">
-                            <span class="national-price">759 ريال</span>
+                            <span class="original-price">1600 ريال</span>
+                            <span class="offer-price">799 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">ديرمابن + ميزوثيرابي</div>
                         <div class="price-container">
-                            <span class="national-price">259 ريال</span>
+                            <span class="original-price">600 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">بلازما عادية للوجه او الشعر</div>
                         <div class="price-container">
-                            <span class="national-price">459 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">بلازما ذهبية الشعر</div>
                         <div class="price-container">
-                            <span class="national-price">559 ريال</span>
+                            <span class="original-price">1200 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">بلازما ذهبية للوجه</div>
                         <div class="price-container">
-                            <span class="national-price">559 ريال</span>
+                            <span class="original-price">1200 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">اكسوزم فيتا 1 مل لعلاج الندبات</div>
                         <div class="price-container">
-                            <span class="national-price">259 ريال</span>
+                            <span class="original-price">600 ريال</span>
+                            <span class="offer-price">299 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item package-item">
+                        <div class="service-name">باقة الجمال</div>
+                        <div class="service-desc">ثلاث جلسات ليزر فل بدي + تشقير حواجب + ابرة نضارة ياقوت + ديرما بن + 5 جلسات تفتيح مناطق</div>
+                        <div class="price-container">
+                            <span class="offer-price">2299 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item package-item">
+                        <div class="service-name">باقة نضارة الملكات</div>
+                        <div class="service-desc">2 مل فلر + بوتكس كامل الوجه + ابرة نضارة + جلستين توريد شفايف + 4 جلسات تفتيح ركب واكواع</div>
+                        <div class="price-container">
+                            <span class="offer-price">3799 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item package-item">
+                        <div class="service-name">باقة العناية الاساسية</div>
+                        <div class="service-desc">تنظيف بشرة عميق + ماسك ترطيب ونضارة + تقشير خفيف + ترطيب فيتامين سي + تشقير حواجب ووجه</div>
+                        <div class="price-container">
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                 </div>
@@ -1206,102 +530,237 @@
                 <h3 class="section-title">عروض التغذية</h3>
                 <div class="services-grid">
                     <div class="service-item">
+                        <div class="service-name">قياس انبودي</div>
+                        <div class="price-container">
+                            <span class="original-price">100 ريال</span>
+                            <span class="offer-price">49 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
                         <div class="service-name">قياس انبودي + كشف</div>
                         <div class="price-container">
-                            <span class="national-price">49 ريال</span>
+                            <span class="original-price">100 ريال</span>
+                            <span class="offer-price">49 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">كشف</div>
                         <div class="price-container">
-                            <span class="national-price">مجاناً</span>
+                            <span class="free-price">مجاناً</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">جلسة لايبوسل والثانية ب 95</div>
+                        <div class="service-name">جلستين لايبوسل</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">800 ريال</span>
+                            <span class="offer-price">549 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">4 جلسات لايبوسل تنحيف امن وفعال</div>
                         <div class="price-container">
-                            <span class="national-price">895 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">999 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
                         <div class="service-name">8 جلسات لايبوسل تنحيف امن وفعال</div>
                         <div class="price-container">
-                            <span class="national-price">1695 ريال</span>
+                            <span class="original-price">3600 ريال</span>
+                            <span class="offer-price">1999 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة التغذية الخاصة بالفرشاة</div>
-                        <div class="service-desc">نظام لمدة 3 شهور+تصميم حمية خاصة +متابعة يومية اونلاين+ زيارة كل اسبوعين في العيادة +ارفاق ملفات ارشادية+تطبيق رياضي+التوعية والتعليم على الغذاء السليم في كل جلسة+هدية احضار شخص لتجربة استشارة</div>
+                        <div class="service-desc">نظام لمدة 3 شهور + تصميم حمية خاصة + متابعة يومية اونلاين + زيارة كل اسبوعين في العيادة + ارفاق ملفات ارشادية + تطبيق رياضي + التوعية والتعليم على الغذاء السليم في كل جلسة + هدية احضار شخص لتجربة استشارة</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة متابعة فقر الدم</div>
-                        <div class="service-desc">زيارتين قياس Inbody +تحليل مخزون الحديد+تحليل صورة دم +تحليل نسبة الحديد</div>
+                        <div class="service-desc">زيارتين قياس Inbody + تحليل مخزون الحديد + تحليل صورة دم + تحليل نسبة الحديد</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">399 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة تساقط الشعر</div>
-                        <div class="service-desc">نظام غذائي+تحليل صورة الدم +تحليل نسبة الحديد +تحليل مخزون الحديد+تحليل نسبة الزنك+تحليل هرمون الغدة الدرقية+ تحليل فيتامين دال+تحليل فيتامين B12</div>
+                        <div class="service-desc">نظام غذائي + تحليل صورة الدم + تحليل نسبة الحديد + تحليل مخزون الحديد + تحليل نسبة الزنك + تحليل هرمون الغدة الدرقية + تحليل فيتامين دال + تحليل فيتامين B12</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة الغدة الدرقية</div>
-                        <div class="service-desc">نظام غذائي+متابعة +قياس انبودي+تحليل T3+تحليل T4+تحليل TSH</div>
+                        <div class="service-desc">نظام غذائي + متابعة + قياس انبودي + تحليل T3 + تحليل T4 + تحليل TSH</div>
                         <div class="price-container">
-                            <span class="national-price">395 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة التغذية المتكاملة اونلاين</div>
-                        <div class="service-desc">مدة 3 شهور الكشفية اونلاين +قراءة التحاليل + متابعة اونلاين اتصال اسبوعيا +جدول غذائي وخطة علاجية + ملف وصفات صحية</div>
+                        <div class="service-desc">مدة 3 شهور الكشفية اونلاين + قراءة التحاليل + متابعة اونلاين اتصال اسبوعيا + جدول غذائي وخطة علاجية + ملف وصفات صحية</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">499 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة تكيس المبايض</div>
-                        <div class="service-desc">نظام غذائي + متابعة يومية اونلاين لمدة شهر + تحليل FSH+ تحليل LH+تحليل برولاكتين</div>
+                        <div class="service-desc">نظام غذائي + متابعة يومية اونلاين لمدة شهر + تحليل FSH + تحليل LH + تحليل برولاكتين</div>
                         <div class="price-container">
-                            <span class="national-price">495 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">باقة ابر التنحيف</div>
-                        <div class="service-desc">نظام غذائي+تحليلCBC+تحليل VD+تحليل TSH+تحليلFERRITIN+ تحليلVB12+تحليل انزيمات الكبد+تحليل وظائف الكلى</div>
+                        <div class="service-desc">نظام غذائي + تحليل CBC + تحليل VD + تحليل TSH + تحليل FERRITIN + تحليل VB12 + تحليل انزيمات الكبد + تحليل وظائف الكلى</div>
                         <div class="price-container">
-                            <span class="national-price">595 ريال</span>
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">699 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">تحليل البصمة الغذائية + نظام غذائي + قياس IN BODY+متابعة +كشف</div>
+                        <div class="service-name">تحليل البصمة الغذائية + نظام غذائي + قياس IN BODY + متابعة + كشف</div>
                         <div class="price-container">
-                            <span class="national-price">1495 ريال</span>
+                            <span class="original-price">2000 ريال</span>
+                            <span class="offer-price">1599 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">الباقة الفضية</div>
-                        <div class="service-desc">نظام غذائي + استشارة + قياس in body +لمدة شهر</div>
+                        <div class="service-desc">نظام غذائي + استشارة + قياس in body + لمدة شهر</div>
                         <div class="price-container">
-                            <span class="national-price">195 ريال</span>
+                            <span class="original-price">249 ريال</span>
+                            <span class="offer-price">299 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
                         <div class="service-name">الباقة الذهبية</div>
-                        <div class="service-desc">نظام غذائي + استشارة + قياس in body +لمدة شهر + مع متابعة اون لاين</div>
+                        <div class="service-desc">نظام غذائي + استشارة + قياس in body + لمدة شهر + مع متابعة اون لاين</div>
                         <div class="price-container">
-                            <span class="national-price">295 ريال</span>
+                            <span class="original-price">350 ريال</span>
+                            <span class="offer-price">399 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dental Services -->
+            <div class="clinic-section" id="dental">
+                <h3 class="section-title">عروض الأسنان</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-name">الكشف وفتح الملف</div>
+                        <div class="price-container">
+                            <span class="free-price">مجاناً</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">زراعة الاسنان مع التركيب</div>
+                        <div class="price-container">
+                            <span class="original-price">5000 ريال</span>
+                            <span class="offer-price">2500 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">تركيب زيركون</div>
+                        <div class="price-container">
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">650 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">ابتسامة 16 سن</div>
+                        <div class="price-container">
+                            <span class="original-price">14000 ريال</span>
+                            <span class="offer-price">6999 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">تنظيف الاسنان يبدأ من</div>
+                        <div class="price-container">
+                            <span class="original-price">300 ريال</span>
+                            <span class="offer-price">150 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">تبييض الأسنان</div>
+                        <div class="price-container">
+                            <span class="original-price">1200 ريال</span>
+                            <span class="offer-price">599 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">ابتسامة 16 سن (3D)</div>
+                        <div class="price-container">
+                            <span class="original-price">20000 ريال</span>
+                            <span class="offer-price">9999 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">حشوات تبدأ من</div>
+                        <div class="price-container">
+                            <span class="original-price">400 ريال</span>
+                            <span class="offer-price">250 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">علاج عصب تبدأ من</div>
+                        <div class="price-container">
+                            <span class="original-price">800 ريال</span>
+                            <span class="offer-price">500 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">الخلع (خلع عادي)</div>
+                        <div class="price-container">
+                            <span class="original-price">400 ريال</span>
+                            <span class="offer-price">300 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">الخلع (خلع جراحي)</div>
+                        <div class="price-container">
+                            <span class="offer-price">500 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">التقويم دفعة أولى</div>
+                        <div class="price-container">
+                            <span class="original-price">1000 ريال</span>
+                            <span class="offer-price">599 ريال (اقساط 300 ريال)</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">الاشعة</div>
+                        <div class="price-container">
+                            <span class="offer-price">150 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">الاشعة (3D)</div>
+                        <div class="price-container">
+                            <span class="offer-price">350 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">سيفالو</div>
+                        <div class="price-container">
+                            <span class="offer-price">350 ريال</span>
+                        </div>
+                    </div>
+                    <div class="service-item package-item">
+                        <div class="service-name">باقة اللؤلؤة</div>
+                        <div class="service-desc">الكشف + تنظيف + ازالة جير + تلميع الاسنان + تبييض بجهاز الليزر</div>
+                        <div class="price-container">
+                            <span class="offer-price">599 ريال</span>
                         </div>
                     </div>
                 </div>
@@ -1309,30 +768,28 @@
         </main>
 
         <div class="note-section">
-            <div class="note-card national-day">
+            <div class="note-card">
                 <i class="fas fa-star note-icon"></i>
-                <p class="note-text">عروض محدودة بمناسبة اليوم الوطني السعودي 95 - صالحة حتى نفاد الكمية</p>
+                <p class="note-text">عروض محدودة لشهر أكتوبر - لا تفوت الفرصة</p>
             </div>
         </div>
 
-        <!-- Contact Section -->
         <div class="contact-section">
             <h3 class="contact-title">احجز موعدك الآن</h3>
             <div class="contact-buttons">
-                <a href="tel:0547199970" class="contact-btn call-btn">
+                <a href="tel:0547199979" class="contact-btn call-btn">
                     <i class="fas fa-phone"></i>
                     <span>اتصل الآن</span>
-                    <span class="phone-number">0547199970</span>
+                    <span class="phone-number">0547199979</span>
                 </a>
-                <a href="https://wa.me/966148134516" target="_blank" class="contact-btn whatsapp-btn">
+                <a href="https://wa.me/966547199970" target="_blank" class="contact-btn whatsapp-btn">
                     <i class="fab fa-whatsapp"></i>
                     <span>واتساب</span>
-                    <span class="phone-number">0148134516</span>
+                    <span class="phone-number">0547199979</span>
                 </a>
             </div>
         </div>
 
-        <!-- Social Media Section -->
         <div class="social-section">
             <h3 class="social-title">تابعونا على</h3>
             <div class="social-icons">
@@ -1361,373 +818,6 @@
         </div>
     </div>
 
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // Get all navigation buttons and clinic sections
-            const navButtons = document.querySelectorAll('.nav-btn');
-            const clinicSections = document.querySelectorAll('.clinic-section');
-            const searchInput = document.getElementById('searchInput');
-            const clearBtn = document.getElementById('clearSearch');
-            const serviceItems = document.querySelectorAll('.service-item');
-            
-            // Add click event listeners to navigation buttons
-            navButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Get the target clinic from data attribute
-                    const targetClinic = this.getAttribute('data-clinic');
-                    
-                    // Remove active class from all buttons
-                    navButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Hide all clinic sections
-                    clinicSections.forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    
-                    // Show target clinic section
-                    const targetSection = document.getElementById(targetClinic);
-                    if (targetSection) {
-                        targetSection.classList.add('active');
-                    }
-                    
-                    // Clear search when switching tabs
-                    clearSearch();
-                    
-                    // Scroll to top of section smoothly
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-            
-            // Search functionality
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase().trim();
-                
-                // Show/hide clear button
-                if (searchTerm.length > 0) {
-                    clearBtn.classList.add('show');
-                } else {
-                    clearBtn.classList.remove('show');
-                }
-                
-                // Filter services
-                filterServices(searchTerm);
-            });
-            
-            // Clear search functionality
-            clearBtn.addEventListener('click', function() {
-                clearSearch();
-            });
-            
-            function clearSearch() {
-                searchInput.value = '';
-                clearBtn.classList.remove('show');
-                
-                // Remove all highlights and show all items
-                serviceItems.forEach(item => {
-                    item.style.display = 'block';
-                    removeHighlights(item);
-                });
-            }
-            
-            function filterServices(searchTerm) {
-                if (searchTerm === '') {
-                    // Show all items if search is empty
-                    serviceItems.forEach(item => {
-                        item.style.display = 'block';
-                        removeHighlights(item);
-                    });
-                    return;
-                }
-                
-                let hasResults = false;
-                
-                serviceItems.forEach(item => {
-                    const serviceName = item.querySelector('.service-name').textContent.toLowerCase();
-                    const serviceDesc = item.querySelector('.service-desc');
-                    let descText = serviceDesc ? serviceDesc.textContent.toLowerCase() : '';
-                    
-                    // Check if search term matches service name or description
-                    if (serviceName.includes(searchTerm) || descText.includes(searchTerm)) {
-                        item.style.display = 'block';
-                        highlightSearchTerm(item, searchTerm);
-                        hasResults = true;
-                    } else {
-                        item.style.display = 'none';
-                        removeHighlights(item);
-                    }
-                });
-                
-                // Show "no results" message if needed
-                if (!hasResults) {
-                    showNoResults();
-                } else {
-                    hideNoResults();
-                }
-            }
-            
-            function highlightSearchTerm(item, searchTerm) {
-                const serviceName = item.querySelector('.service-name');
-                const serviceDesc = item.querySelector('.service-desc');
-                
-                // Highlight in service name
-                highlightText(serviceName, searchTerm);
-                
-                // Highlight in service description if exists
-                if (serviceDesc) {
-                    highlightText(serviceDesc, searchTerm);
-                }
-            }
-            
-            function highlightText(element, searchTerm) {
-                const originalText = element.dataset.originalText || element.textContent;
-                element.dataset.originalText = originalText;
-                
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                const highlightedText = originalText.replace(regex, '<span class="highlight">$1</span>');
-                element.innerHTML = highlightedText;
-            }
-            
-            function removeHighlights(item) {
-                const serviceName = item.querySelector('.service-name');
-                const serviceDesc = item.querySelector('.service-desc');
-                
-                if (serviceName.dataset.originalText) {
-                    serviceName.innerHTML = serviceName.dataset.originalText;
-                }
-                
-                if (serviceDesc && serviceDesc.dataset.originalText) {
-                    serviceDesc.innerHTML = serviceDesc.dataset.originalText;
-                }
-            }
-            
-            function showNoResults() {
-                // Remove existing no results message
-                hideNoResults();
-                
-                const activeSection = document.querySelector('.clinic-section.active .services-grid');
-                if (activeSection) {
-                    const noResultsDiv = document.createElement('div');
-                    noResultsDiv.className = 'no-results';
-                    noResultsDiv.innerHTML = `
-                        <div style="text-align: center; padding: 40px; color: #666;">
-                            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.3;"></i>
-                            <h3 style="margin-bottom: 10px;">لم يتم العثور على نتائج</h3>
-                            <p>جرب البحث بكلمات أخرى أو تصفح الأقسام المختلفة</p>
-                        </div>
-                    `;
-                    activeSection.appendChild(noResultsDiv);
-                }
-            }
-            
-            function hideNoResults() {
-                const existingNoResults = document.querySelector('.no-results');
-                if (existingNoResults) {
-                    existingNoResults.remove();
-                }
-            }
-            
-            // Add hover effects to service items
-            serviceItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.02)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-            
-            // Add click tracking for social media links
-            const socialLinks = document.querySelectorAll('.social-icon');
-            
-            socialLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Add animation effect
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
-                });
-            });
-            
-            // Add click tracking for contact buttons
-            const contactButtons = document.querySelectorAll('.contact-btn');
-            
-            contactButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Add click animation
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 200);
-                    
-                    // Log contact attempt for analytics
-                    const contactType = this.classList.contains('whatsapp-btn') ? 'WhatsApp' : 'Phone';
-                    console.log(`تم النقر على ${contactType}: 0148134516`);
-                });
-                
-                // Add hover pulse animation for contact buttons
-                button.addEventListener('mouseenter', function() {
-                    this.style.animation = 'pulse 0.6s ease-in-out';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.animation = '';
-                });
-            });
-            
-            // Add scroll animation for elements
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe all service items for animation
-            serviceItems.forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(item);
-            });
-            
-            // Add keyboard navigation support
-            navButtons.forEach((button, index) => {
-                button.addEventListener('keydown', function(e) {
-                    let nextIndex;
-                    
-                    switch(e.key) {
-                        case 'ArrowRight':
-                            nextIndex = (index - 1 + navButtons.length) % navButtons.length;
-                            navButtons[nextIndex].focus();
-                            e.preventDefault();
-                            break;
-                        case 'ArrowLeft':
-                            nextIndex = (index + 1) % navButtons.length;
-                            navButtons[nextIndex].focus();
-                            e.preventDefault();
-                            break;
-                        case 'Enter':
-                        case ' ':
-                            this.click();
-                            e.preventDefault();
-                            break;
-                    }
-                });
-            });
-            
-            // Add Enter key support for search
-            searchInput.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    clearSearch();
-                }
-            });
-            
-            // Add loading animation
-            const container = document.querySelector('.container');
-            container.style.opacity = '0';
-            container.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                container.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                container.style.opacity = '1';
-                container.style.transform = 'translateY(0)';
-            }, 100);
-            
-            // Add price highlight animation for national day prices
-            const nationalPrices = document.querySelectorAll('.national-price');
-            
-            nationalPrices.forEach(price => {
-                price.addEventListener('mouseenter', function() {
-                    this.style.textShadow = '0 0 10px rgba(13, 119, 51, 0.5)';
-                    if (!this.classList.contains('special')) {
-                        this.style.fontSize = '1.6rem';
-                    }
-                });
-                
-                price.addEventListener('mouseleave', function() {
-                    this.style.textShadow = '1px 1px 2px rgba(0, 0, 0, 0.1)';
-                    if (!this.classList.contains('special')) {
-                        this.style.fontSize = '1.5rem';
-                    }
-                });
-            });
-            
-            // Add special animation for special offers
-            const specialOffers = document.querySelectorAll('.special-offer');
-            
-            specialOffers.forEach(offer => {
-                // Add subtle glow animation
-                setInterval(() => {
-                    offer.style.boxShadow = '0 10px 30px rgba(255, 215, 0, 0.3)';
-                    setTimeout(() => {
-                        offer.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
-                    }, 1000);
-                }, 3000);
-            });
-            
-            // Add note card animation
-            const noteCard = document.querySelector('.note-card');
-            if (noteCard) {
-                noteCard.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.02)';
-                });
-                
-                noteCard.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            }
-            
-            // Add Saudi flag animation
-            const flagElements = document.querySelectorAll('.flag-decoration i, .flag-decoration span');
-            
-            flagElements.forEach((flag, index) => {
-                setInterval(() => {
-                    flag.style.transform = 'scale(1.2)';
-                    setTimeout(() => {
-                        flag.style.transform = 'scale(1)';
-                    }, 300);
-                }, 2000 + (index * 200));
-            });
-            
-            // Count services for each section
-            function countServices() {
-                const dentalServices = document.querySelectorAll('#dental .service-item').length;
-                const dermatologyServices = document.querySelectorAll('#dermatology .service-item').length;
-                const nutritionServices = document.querySelectorAll('#nutrition .service-item').length;
-                
-                console.log('عروض اليوم الوطني - إحصائيات:');
-                console.log('عروض الأسنان:', dentalServices);
-                console.log('عروض الجلدية والتجميل:', dermatologyServices);
-                console.log('عروض التغذية:', nutritionServices);
-                console.log('المجموع:', dentalServices + dermatologyServices + nutritionServices);
-            }
-            
-            // Auto-focus search input on page load
-            setTimeout(() => {
-                searchInput.focus();
-            }, 1000);
-            
-            // Initialize the application
-            countServices();
-            console.log('عروض اليوم الوطني السعودي 95 - محملة بنجاح!');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
