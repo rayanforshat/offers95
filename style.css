@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #00343a, #f5f5f5, #b99462);
+    background: linear-gradient(135deg, #000000, #2c2c2c, #ffffff, #d4d4d4);
     background-size: 400% 400%;
-    animation: brandGradient 8s ease-in-out infinite;
+    animation: blackFridayGradient 10s ease-in-out infinite;
     line-height: 1.6;
     direction: rtl;
     min-height: 100vh;
 }
 
-@keyframes brandGradient {
+@keyframes blackFridayGradient {
     0%, 100% {
         background-position: 0% 50%;
     }
@@ -32,13 +32,39 @@ body {
 .header {
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #00343a, #b99462);
+    background: linear-gradient(135deg, #000000, #1a1a1a);
     padding: 40px 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #b99462;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border: 3px solid #ffffff;
     position: relative;
     overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.05) 10px,
+        rgba(255, 255, 255, 0.05) 20px
+    );
+    animation: stripesMove 20s linear infinite;
+}
+
+@keyframes stripesMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
 }
 
 .logo-container {
@@ -53,22 +79,49 @@ body {
     width: 120px;
     height: 120px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .main-title {
     font-size: 2.5rem;
-    color: #b99462;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .subtitle {
     font-size: 1.4rem;
-    color: white;
+    color: #e0e0e0;
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     margin-bottom: 15px;
+}
+
+.black-friday-badge {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #000000;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.badge-text {
+    letter-spacing: 2px;
 }
 
 .search-section {
@@ -88,7 +141,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #00343a;
+    color: #000000;
     font-size: 1.2rem;
     z-index: 2;
 }
@@ -96,18 +149,18 @@ body {
 .search-input {
     width: 100%;
     padding: 15px 50px 15px 50px;
-    border: 3px solid #b99462;
+    border: 3px solid #000000;
     border-radius: 25px;
     font-size: 1.1rem;
     font-family: 'Cairo', sans-serif;
     background: white;
-    box-shadow: 0 4px 15px rgba(185, 148, 98, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .search-input:focus {
     outline: none;
-    box-shadow: 0 8px 25px rgba(185, 148, 98, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -118,7 +171,7 @@ body {
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #999;
+    color: #666;
     font-size: 1.2rem;
     cursor: pointer;
     padding: 5px;
@@ -131,7 +184,7 @@ body {
 }
 
 .clear-btn:hover {
-    color: #00343a;
+    color: #000000;
 }
 
 .clinic-nav {
@@ -144,8 +197,8 @@ body {
 
 .nav-btn {
     background: white;
-    border: 3px solid #b99462;
-    color: #00343a;
+    border: 3px solid #000000;
+    color: #000000;
     padding: 15px 30px;
     border-radius: 25px;
     font-size: 1.1rem;
@@ -157,16 +210,16 @@ body {
 }
 
 .nav-btn:hover {
-    background: linear-gradient(135deg, #00343a, #004d56);
-    color: #b99462;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .nav-btn.active {
-    background: linear-gradient(135deg, #00343a, #004d56);
-    border-color: #b99462;
-    color: #b99462;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    border-color: #ffffff;
+    color: #ffffff;
     transform: translateY(-3px);
 }
 
@@ -192,11 +245,15 @@ body {
 
 .section-title {
     font-size: 2rem;
-    color: #00343a;
+    color: #000000;
     text-align: center;
     margin-bottom: 30px;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #000000;
 }
 
 .services-grid {
@@ -210,34 +267,51 @@ body {
     background: white;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    border-right: 5px solid #b99462;
+    border: 3px solid #000000;
     position: relative;
     overflow: hidden;
 }
 
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 0;
+    border-color: transparent #000000 transparent transparent;
+}
+
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 52, 58, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-color: #333333;
 }
 
 .service-item.package-item {
-    border-right-color: #00343a;
-    background: linear-gradient(135deg, #f0f8f8, #ffffff);
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    border-color: #333333;
+}
+
+.service-item.package-item::before {
+    border-color: transparent #333333 transparent transparent;
 }
 
 .service-name {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #333;
+    color: #000000;
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
 .service-desc {
     font-size: 0.9rem;
-    color: #666;
+    color: #555555;
     margin-bottom: 15px;
     line-height: 1.4;
     font-style: italic;
@@ -252,22 +326,28 @@ body {
 
 .original-price {
     font-size: 1.2rem;
-    color: #999;
+    color: #999999;
     text-decoration: line-through;
     font-weight: 500;
 }
 
 .offer-price {
     font-size: 1.6rem;
-    color: #b99462;
+    color: #000000;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    padding: 5px 15px;
+    border-radius: 8px;
 }
 
 .free-price {
     font-size: 1.6rem;
-    color: #00343a;
+    color: #000000;
     font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    padding: 5px 15px;
+    border-radius: 8px;
 }
 
 .note-section {
@@ -277,20 +357,20 @@ body {
 }
 
 .note-card {
-    background: linear-gradient(135deg, #00343a, #004d56);
+    background: linear-gradient(135deg, #000000, #1a1a1a);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border: 2px solid #b99462;
+    border: 2px solid #ffffff;
 }
 
 .note-icon {
     font-size: 2rem;
-    color: #b99462;
+    color: #ffffff;
     flex-shrink: 0;
 }
 
@@ -308,12 +388,12 @@ body {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #b99462;
+    border: 3px solid #000000;
 }
 
 .contact-title {
     font-size: 2rem;
-    color: #00343a;
+    color: #000000;
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -341,14 +421,14 @@ body {
 }
 
 .call-btn {
-    background: linear-gradient(135deg, #00343a, #004d56);
-    color: #b99462;
-    border: 3px solid #b99462;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffffff;
+    border: 3px solid #ffffff;
 }
 
 .call-btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 52, 58, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .whatsapp-btn {
@@ -386,12 +466,12 @@ body {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #b99462;
+    border: 3px solid #000000;
 }
 
 .social-title {
     font-size: 1.8rem;
-    color: #00343a;
+    color: #000000;
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -409,24 +489,28 @@ body {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #00343a, #004d56);
-    color: #b99462;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffffff;
     border-radius: 50%;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffffff;
 }
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 52, 58, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #333333, #1a1a1a);
 }
 
 .highlight {
-    background: linear-gradient(120deg, #fff3cd, #fff3cd);
+    background: linear-gradient(120deg, #ffeb3b, #fdd835);
     padding: 2px 4px;
     border-radius: 3px;
+    color: #000000;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
