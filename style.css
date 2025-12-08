@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #000000, #2c2c2c, #ffffff, #d4d4d4);
+    background: linear-gradient(135deg, #093035, #0a4a52, #f7e1bd, #e8d4a8);
     background-size: 400% 400%;
-    animation: blackFridayGradient 10s ease-in-out infinite;
+    animation: originalGradient 10s ease-in-out infinite;
     line-height: 1.6;
     direction: rtl;
     min-height: 100vh;
 }
 
-@keyframes blackFridayGradient {
+@keyframes originalGradient {
     0%, 100% {
         background-position: 0% 50%;
     }
@@ -32,11 +32,11 @@ body {
 .header {
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
+    background: linear-gradient(135deg, #093035, #0c4149);
     padding: 40px 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    border: 3px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.5);
+    border: 3px solid #f7e1bd;
     position: relative;
     overflow: hidden;
 }
@@ -52,8 +52,8 @@ body {
         45deg,
         transparent,
         transparent 10px,
-        rgba(255, 255, 255, 0.05) 10px,
-        rgba(255, 255, 255, 0.05) 20px
+        rgba(247, 225, 189, 0.05) 10px,
+        rgba(247, 225, 189, 0.05) 20px
     );
     animation: stripesMove 20s linear infinite;
 }
@@ -99,15 +99,15 @@ body {
 }
 
 .black-friday-badge {
-    background: linear-gradient(135deg, #ffffff, #e0e0e0);
-    color: #000000;
+    background: linear-gradient(135deg, #f7e1bd, #e8d4a8);
+    color: #093035;
     padding: 10px 30px;
     border-radius: 25px;
     font-weight: 700;
     font-size: 1.2rem;
     display: inline-block;
     margin-top: 10px;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(247, 225, 189, 0.3);
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -141,7 +141,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #000000;
+    color: #093035;
     font-size: 1.2rem;
     z-index: 2;
 }
@@ -149,18 +149,18 @@ body {
 .search-input {
     width: 100%;
     padding: 15px 50px 15px 50px;
-    border: 3px solid #000000;
+    border: 3px solid #093035;
     border-radius: 25px;
     font-size: 1.1rem;
     font-family: 'Cairo', sans-serif;
     background: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(9, 48, 53, 0.2);
     transition: all 0.3s ease;
 }
 
 .search-input:focus {
     outline: none;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.3);
     transform: translateY(-2px);
 }
 
@@ -184,7 +184,7 @@ body {
 }
 
 .clear-btn:hover {
-    color: #000000;
+    color: #093035;
 }
 
 .clinic-nav {
@@ -197,8 +197,8 @@ body {
 
 .nav-btn {
     background: white;
-    border: 3px solid #000000;
-    color: #000000;
+    border: 3px solid #093035;
+    color: #093035;
     padding: 15px 30px;
     border-radius: 25px;
     font-size: 1.1rem;
@@ -206,20 +206,20 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Cairo', sans-serif;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(9, 48, 53, 0.1);
 }
 
 .nav-btn:hover {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: #ffffff;
+    background: linear-gradient(135deg, #093035, #0c4149);
+    color: #f7e1bd;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.3);
 }
 
 .nav-btn.active {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    border-color: #ffffff;
-    color: #ffffff;
+    background: linear-gradient(135deg, #093035, #0c4149);
+    border-color: #f7e1bd;
+    color: #f7e1bd;
     transform: translateY(-3px);
 }
 
@@ -245,15 +245,15 @@ body {
 
 .section-title {
     font-size: 2rem;
-    color: #000000;
+    color: #093035;
     text-align: center;
     margin-bottom: 30px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(9, 48, 53, 0.1);
     background: white;
     padding: 15px;
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #093035;
 }
 
 .services-grid {
@@ -267,9 +267,9 @@ body {
     background: white;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 20px rgba(9, 48, 53, 0.15);
     transition: all 0.3s ease;
-    border: 3px solid #000000;
+    border: 3px solid #093035;
     position: relative;
     overflow: hidden;
 }
@@ -283,28 +283,28 @@ body {
     height: 0;
     border-style: solid;
     border-width: 0 50px 50px 0;
-    border-color: transparent #000000 transparent transparent;
+    border-color: transparent #093035 transparent transparent;
 }
 
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    border-color: #333333;
+    box-shadow: 0 10px 30px rgba(9, 48, 53, 0.25);
+    border-color: #0c4149;
 }
 
 .service-item.package-item {
-    background: linear-gradient(135deg, #f5f5f5, #ffffff);
-    border-color: #333333;
+    background: linear-gradient(135deg, #f7e1bd, #ffffff);
+    border-color: #0c4149;
 }
 
 .service-item.package-item::before {
-    border-color: transparent #333333 transparent transparent;
+    border-color: transparent #0c4149 transparent transparent;
 }
 
 .service-name {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #000000;
+    color: #093035;
     margin-bottom: 15px;
     line-height: 1.5;
 }
@@ -333,19 +333,19 @@ body {
 
 .offer-price {
     font-size: 1.6rem;
-    color: #000000;
+    color: #093035;
     font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    text-shadow: 1px 1px 2px rgba(9, 48, 53, 0.1);
+    background: linear-gradient(135deg, #f7e1bd, #e8d4a8);
     padding: 5px 15px;
     border-radius: 8px;
 }
 
 .free-price {
     font-size: 1.6rem;
-    color: #000000;
+    color: #093035;
     font-weight: 700;
-    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    background: linear-gradient(135deg, #f7e1bd, #e8d4a8);
     padding: 5px 15px;
     border-radius: 8px;
 }
@@ -357,20 +357,20 @@ body {
 }
 
 .note-card {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
+    background: linear-gradient(135deg, #093035, #0c4149);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.3);
     max-width: 800px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border: 2px solid #ffffff;
+    border: 2px solid #f7e1bd;
 }
 
 .note-icon {
     font-size: 2rem;
-    color: #ffffff;
+    color: #f7e1bd;
     flex-shrink: 0;
 }
 
@@ -387,13 +387,13 @@ body {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #000000;
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.1);
+    border: 3px solid #093035;
 }
 
 .contact-title {
     font-size: 2rem;
-    color: #000000;
+    color: #093035;
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -416,19 +416,19 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.1);
     min-width: 200px;
 }
 
 .call-btn {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: #ffffff;
-    border: 3px solid #ffffff;
+    background: linear-gradient(135deg, #093035, #0c4149);
+    color: #f7e1bd;
+    border: 3px solid #f7e1bd;
 }
 
 .call-btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(9, 48, 53, 0.3);
 }
 
 .whatsapp-btn {
@@ -465,13 +465,13 @@ body {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #000000;
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.1);
+    border: 3px solid #093035;
 }
 
 .social-title {
     font-size: 1.8rem;
-    color: #000000;
+    color: #093035;
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -489,20 +489,20 @@ body {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: #ffffff;
+    background: linear-gradient(135deg, #093035, #0c4149);
+    color: #f7e1bd;
     border-radius: 50%;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(9, 48, 53, 0.1);
+    border: 2px solid #f7e1bd;
 }
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #333333, #1a1a1a);
+    box-shadow: 0 8px 25px rgba(9, 48, 53, 0.3);
+    background: linear-gradient(135deg, #0c4149, #093035);
 }
 
 .highlight {
