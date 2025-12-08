@@ -143,5 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.transform = 'translateY(0)';
     }, 100);
     
-    console.log('عروض أكتوبر - الفرشاة كلينك محملة بنجاح!');
+    console.log('عروض نهاية السنة - الفرشاة كلينك محملة بنجاح!');
 });
