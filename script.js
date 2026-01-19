@@ -1,34 +1,66 @@
+// Language state
+let currentLang = 'ar';
+
+// Toggle language function
+function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    
+    // Update HTML attributes
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    
+    // Update body font family
+    document.body.style.fontFamily = currentLang === 'ar' ? "'Cairo', sans-serif" : "'Poppins', sans-serif";
+    
+    // Update all multilingual elements
+    updateMultilingualElements();
+    
+    // Update search placeholder
+    const searchInput = document.getElementById('searchInput');
+    searchInput.placeholder = searchInput.getAttribute('data-placeholder-' + currentLang);
+    
+    // Update language toggle button text
+    const langBtn = document.getElementById('languageToggle');
+    langBtn.querySelector('.lang-text').textContent = currentLang === 'ar' ? 'English' : 'العربية';
+}
+
+// Update all elements with multilingual data attributes
+function updateMultilingualElements() {
+    document.querySelectorAll('[data-ar][data-en]').forEach(element => {
+        const text = element.getAttribute('data-' + currentLang);
+        if (text) {
+            // Preserve original text as data attribute for search functionality
+            if (!element.dataset.originalText) {
+                element.dataset.originalText = element.textContent;
+            }
+            element.textContent = text;
+        }
+    });
+}
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     const navButtons = document.querySelectorAll('.nav-btn');
     const clinicSections = document.querySelectorAll('.clinic-section');
     const searchInput = document.getElementById('searchInput');
     const clearBtn = document.getElementById('clearSearch');
-    const serviceItems = document.querySelectorAll('.service-item');
     
     // Navigation functionality
     navButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetClinic = this.getAttribute('data-clinic');
             
-            // Remove active class from all buttons
             navButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
             this.classList.add('active');
             
-            // Hide all clinic sections
             clinicSections.forEach(section => section.classList.remove('active'));
             
-            // Show target clinic section
             const targetSection = document.getElementById(targetClinic);
             if (targetSection) {
                 targetSection.classList.add('active');
             }
             
-            // Clear search when switching tabs
             clearSearch();
-            
-            // Scroll to top smoothly
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
@@ -37,23 +69,17 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase().trim();
         
-        // Show/hide clear button
         if (searchTerm.length > 0) {
             clearBtn.classList.add('show');
         } else {
             clearBtn.classList.remove('show');
         }
         
-        // Filter services
         filterServices(searchTerm);
     });
     
-    // Clear search functionality
-    clearBtn.addEventListener('click', function() {
-        clearSearch();
-    });
+    clearBtn.addEventListener('click', clearSearch);
     
-    // Clear search with Escape key
     searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             clearSearch();
@@ -64,8 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.value = '';
         clearBtn.classList.remove('show');
         
-        // Remove all highlights and show all items
-        serviceItems.forEach(item => {
+        document.querySelectorAll('.service-item').forEach(item => {
             item.style.display = 'block';
             removeHighlights(item);
         });
@@ -73,21 +98,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function filterServices(searchTerm) {
         if (searchTerm === '') {
-            // Show all items if search is empty
-            serviceItems.forEach(item => {
+            document.querySelectorAll('.service-item').forEach(item => {
                 item.style.display = 'block';
                 removeHighlights(item);
             });
             return;
         }
         
-        serviceItems.forEach(item => {
-            const serviceName = item.querySelector('.service-name').textContent.toLowerCase();
+        document.querySelectorAll('.service-item').forEach(item => {
+            const serviceName = item.querySelector('.service-name');
             const serviceDesc = item.querySelector('.service-desc');
-            let descText = serviceDesc ? serviceDesc.textContent.toLowerCase() : '';
             
-            // Check if search term matches service name or description
-            if (serviceName.includes(searchTerm) || descText.includes(searchTerm)) {
+            // Get text in both languages for search
+            const nameAr = serviceName?.getAttribute('data-ar') || '';
+            const nameEn = serviceName?.getAttribute('data-en') || '';
+            const descAr = serviceDesc?.getAttribute('data-ar') || '';
+            const descEn = serviceDesc?.getAttribute('data-en') || '';
+            
+            const searchText = (nameAr + ' ' + nameEn + ' ' + descAr + ' ' + descEn).toLowerCase();
+            
+            if (searchText.includes(searchTerm)) {
                 item.style.display = 'block';
                 highlightSearchTerm(item, searchTerm);
             } else {
@@ -101,19 +131,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const serviceName = item.querySelector('.service-name');
         const serviceDesc = item.querySelector('.service-desc');
         
-        // Highlight in service name
-        highlightText(serviceName, searchTerm);
-        
-        // Highlight in service description if exists
-        if (serviceDesc) {
-            highlightText(serviceDesc, searchTerm);
-        }
+        if (serviceName) highlightText(serviceName, searchTerm);
+        if (serviceDesc) highlightText(serviceDesc, searchTerm);
     }
     
     function highlightText(element, searchTerm) {
-        const originalText = element.dataset.originalText || element.textContent;
-        element.dataset.originalText = originalText;
-        
+        const originalText = element.textContent;
         const regex = new RegExp(`(${searchTerm})`, 'gi');
         const highlightedText = originalText.replace(regex, '<span class="highlight">$1</span>');
         element.innerHTML = highlightedText;
@@ -123,12 +146,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const serviceName = item.querySelector('.service-name');
         const serviceDesc = item.querySelector('.service-desc');
         
-        if (serviceName.dataset.originalText) {
-            serviceName.innerHTML = serviceName.dataset.originalText;
+        if (serviceName) {
+            serviceName.textContent = serviceName.getAttribute('data-' + currentLang) || serviceName.textContent;
         }
-        
-        if (serviceDesc && serviceDesc.dataset.originalText) {
-            serviceDesc.innerHTML = serviceDesc.dataset.originalText;
+        if (serviceDesc) {
+            serviceDesc.textContent = serviceDesc.getAttribute('data-' + currentLang) || serviceDesc.textContent;
         }
     }
     
@@ -142,6 +164,4 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.opacity = '1';
         container.style.transform = 'translateY(0)';
     }, 100);
-    
-    console.log('عروض نهاية السنة - الفرشاة كلينك محملة بنجاح!');
 });
