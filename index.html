@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض بداية 2026 - الفرشاة كلينك</title>
+    <title>عروض بداية 2025 - الفرشاة كلينك | Fursha Clinic - Early 2025 Offers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Language Toggle Button -->
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">
+        <i class="fas fa-language"></i>
+        <span class="lang-text">English</span>
+    </button>
+
     <div class="container">
         <header class="header">
             <div class="logo-container">
                 <div class="logo">
                     <img src="logo.png" alt="الفرشاة كلينك" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <h1 class="main-title">الفرشاة كلينك</h1>
-                <h2 class="subtitle">عروض بداية 2026 الحصرية</h2>
+                <h1 class="main-title" data-ar="الفرشاة كلينك" data-en="Fursha Clinic">الفرشاة كلينك</h1>
+                <h2 class="subtitle" data-ar="عروض بداية 2025 الحصرية" data-en="Exclusive Early 2025 Offers">عروض بداية 2025 الحصرية</h2>
                 <div class="black-friday-badge">
-                    <span class="badge-text">عروض 2026</span>
+                    <span class="badge-text" data-ar="عروض 2025" data-en="2025 Offers">عروض 2025</span>
                 </div>
             </div>
         </header>
@@ -28,7 +34,7 @@
         <div class="search-section">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" id="searchInput" placeholder="ابحث عن الخدمة التي تريدها..." class="search-input">
+                <input type="text" id="searchInput" placeholder="ابحث عن الخدمة التي تريدها..." class="search-input" data-placeholder-ar="ابحث عن الخدمة التي تريدها..." data-placeholder-en="Search for the service you want...">
                 <button id="clearSearch" class="clear-btn">
                     <i class="fas fa-times"></i>
                 </button>
@@ -36,942 +42,401 @@
         </div>
 
         <nav class="clinic-nav">
-            <button class="nav-btn active" data-clinic="dermatology">الجلدية والتجميل</button>
-            <button class="nav-btn" data-clinic="nutrition">التغذية</button>
-            <button class="nav-btn" data-clinic="dental">الأسنان</button>
+            <button class="nav-btn active" data-clinic="dermatology" data-ar="الجلدية والتجميل" data-en="Dermatology & Beauty">الجلدية والتجميل</button>
+            <button class="nav-btn" data-clinic="nutrition" data-ar="التغذية" data-en="Nutrition">التغذية</button>
+            <button class="nav-btn" data-clinic="dental" data-ar="الأسنان" data-en="Dental">الأسنان</button>
         </nav>
 
         <main class="main-content">
             <div class="clinic-section active" id="dermatology">
                 <!-- الباقات الشاملة -->
-                <h3 class="section-title">🎁 الباقات الشاملة - عروض 2026 الذهبية 🎁</h3>
+                <h3 class="section-title" data-ar="🎁 الباقات الشاملة - عروض 2025 الذهبية 🎁" data-en="🎁 Comprehensive Packages - Golden 2025 Offers 🎁">🎁 الباقات الشاملة - عروض 2025 الذهبية 🎁</h3>
                 <div class="services-grid">
                     
                     <div class="service-item package-item">
-                        <div class="service-name">باقة المرأة المتكاملة</div>
-                        <div class="service-desc">جلسة ليزر فل بودي مع رتوش + هايدرافيشال + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
+                        <div class="service-name" data-ar="باقة المرأة المتكاملة" data-en="Complete Women's Package">باقة المرأة المتكاملة</div>
+                        <div class="service-desc" data-ar="جلسة ليزر فل بودي مع رتوش + هايدرافيشال + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية" data-en="Full body laser session with touch-ups + Hydrafacial + Face & eyebrow bleaching + Teeth cleaning & tartar removal + Dental & dermatology consultation + Diagnostic X-ray">جلسة ليزر فل بودي مع رتوش + هايدرافيشال + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 55%</span>
-                            <span class="offer-price">526 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 55%" data-en="55% OFF">خصم 55%</span>
+                            <span class="offer-price" data-ar="526 ريال" data-en="526 SAR">526 ريال</span>
                         </div>
-                        <div class="service-note">عرض خاص للنساء</div>
+                        <div class="service-note" data-ar="عرض خاص للنساء" data-en="Special offer for women">عرض خاص للنساء</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة المرأة</div>
-                        <div class="service-desc">جلسة ليزر جسم بدون ظهر وبطن مع رتوش + تنظيف بشرة + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
+                        <div class="service-name" data-ar="باقة المرأة" data-en="Women's Package">باقة المرأة</div>
+                        <div class="service-desc" data-ar="جلسة ليزر جسم بدون ظهر وبطن مع رتوش + تنظيف بشرة + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية" data-en="Laser session without back & abdomen with touch-ups + Skin cleaning + Face & eyebrow bleaching + Teeth cleaning & tartar removal + Dental & dermatology consultation + Diagnostic X-ray">جلسة ليزر جسم بدون ظهر وبطن مع رتوش + تنظيف بشرة + تشقير وجه وحواجب + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
                         <div class="price-container">
-                            <span class="offer-price">399 ريال</span>
+                            <span class="offer-price" data-ar="399 ريال" data-en="399 SAR">399 ريال</span>
                         </div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة الرجل المتكاملة</div>
-                        <div class="service-desc">جلسة ليزر فل بودي + هايدرافيشال + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
+                        <div class="service-name" data-ar="باقة الرجل المتكاملة" data-en="Complete Men's Package">باقة الرجل المتكاملة</div>
+                        <div class="service-desc" data-ar="جلسة ليزر فل بودي + هايدرافيشال + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية" data-en="Full body laser session + Hydrafacial + Teeth cleaning & tartar removal + Dental & dermatology consultation + Diagnostic X-ray">جلسة ليزر فل بودي + هايدرافيشال + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 55%</span>
-                            <span class="offer-price">526 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 55%" data-en="55% OFF">خصم 55%</span>
+                            <span class="offer-price" data-ar="526 ريال" data-en="526 SAR">526 ريال</span>
                         </div>
-                        <div class="service-note">عرض خاص للرجال</div>
+                        <div class="service-note" data-ar="عرض خاص للرجال" data-en="Special offer for men">عرض خاص للرجال</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة الرجل</div>
-                        <div class="service-desc">جلسة ليزر جسم علوي + تنظيف بشرة + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
+                        <div class="service-name" data-ar="باقة الرجل" data-en="Men's Package">باقة الرجل</div>
+                        <div class="service-desc" data-ar="جلسة ليزر جسم علوي + تنظيف بشرة + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية" data-en="Upper body laser session + Skin cleaning + Teeth cleaning & tartar removal + Dental & dermatology consultation + Diagnostic X-ray">جلسة ليزر جسم علوي + تنظيف بشرة + تنظيف الاسنان وإزالة طبقات الجير + كشف في الاسنان والجلدية + اشعة تشخيصية</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 55%</span>
-                            <span class="offer-price">399 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 55%" data-en="55% OFF">خصم 55%</span>
+                            <span class="offer-price" data-ar="399 ريال" data-en="399 SAR">399 ريال</span>
                         </div>
-                        <div class="service-note">عرض خاص للرجال</div>
+                        <div class="service-note" data-ar="عرض خاص للرجال" data-en="Special offer for men">عرض خاص للرجال</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة النضارة الذهبية</div>
-                        <div class="service-desc">إبرة نضارة + هايدرافيشال + ميزو + ديرمابن + تشقير وجه وحواجب</div>
+                        <div class="service-name" data-ar="باقة النضارة الذهبية" data-en="Golden Radiance Package">باقة النضارة الذهبية</div>
+                        <div class="service-desc" data-ar="إبرة نضارة + هايدرافيشال + ميزو + ديرمابن + تشقير وجه وحواجب" data-en="Radiance injection + Hydrafacial + Mesotherapy + Dermapen + Face & eyebrow bleaching">إبرة نضارة + هايدرافيشال + ميزو + ديرمابن + تشقير وجه وحواجب</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 45%</span>
-                            <span class="offer-price">926 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 45%" data-en="45% OFF">خصم 45%</span>
+                            <span class="offer-price" data-ar="926 ريال" data-en="926 SAR">926 ريال</span>
                         </div>
-                        <div class="service-note">نضارة شاملة</div>
+                        <div class="service-note" data-ar="نضارة شاملة" data-en="Complete radiance">نضارة شاملة</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">الباقة المميزة</div>
-                        <div class="service-desc">فيلر 1 مل + بوتكس + تنظيف + تشقير وجه وحواجب</div>
+                        <div class="service-name" data-ar="الباقة المميزة" data-en="Premium Package">الباقة المميزة</div>
+                        <div class="service-desc" data-ar="فيلر 1 مل + بوتكس + تنظيف + تشقير وجه وحواجب" data-en="1ml Filler + Botox + Cleaning + Face & eyebrow bleaching">فيلر 1 مل + بوتكس + تنظيف + تشقير وجه وحواجب</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 39%</span>
-                            <span class="offer-price">1326 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 39%" data-en="39% OFF">خصم 39%</span>
+                            <span class="offer-price" data-ar="1326 ريال" data-en="1326 SAR">1326 ريال</span>
                         </div>
-                        <div class="service-note">الأكثر طلباً</div>
+                        <div class="service-note" data-ar="الأكثر طلباً" data-en="Most requested">الأكثر طلباً</div>
                     </div>
 
                     <div class="service-item package-item vip-package">
-                        <div class="service-name">باقة الملكة - VIP</div>
-                        <div class="service-desc">3 ليزر فل بودي + 3 هايدرافيشال + فيلر 2 مل + بوتكس + 3 ديرمابن</div>
+                        <div class="service-name" data-ar="باقة الملكة - VIP" data-en="Queen Package - VIP">باقة الملكة - VIP</div>
+                        <div class="service-desc" data-ar="3 ليزر فل بودي + 3 هايدرافيشال + فيلر 2 مل + بوتكس + 3 ديرمابن" data-en="3 Full body laser + 3 Hydrafacial + 2ml Filler + Botox + 3 Dermapen">3 ليزر فل بودي + 3 هايدرافيشال + فيلر 2 مل + بوتكس + 3 ديرمابن</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">4026 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 40%" data-en="40% OFF">خصم 40%</span>
+                            <span class="offer-price" data-ar="4026 ريال" data-en="4026 SAR">4026 ريال</span>
                         </div>
-                        <div class="service-note">الباقة الأفخم ⭐</div>
+                        <div class="service-note" data-ar="الباقة الأفخم ⭐" data-en="Most luxurious package ⭐">الباقة الأفخم ⭐</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة الرجل العصري</div>
-                        <div class="service-desc">6 ليزر رجال + 3 هايدرافيشال</div>
+                        <div class="service-name" data-ar="باقة الرجل العصري" data-en="Modern Man Package">باقة الرجل العصري</div>
+                        <div class="service-desc" data-ar="6 ليزر رجال + 3 هايدرافيشال" data-en="6 Men's laser + 3 Hydrafacial">6 ليزر رجال + 3 هايدرافيشال</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 43%</span>
-                            <span class="offer-price">926 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 43%" data-en="43% OFF">خصم 43%</span>
+                            <span class="offer-price" data-ar="926 ريال" data-en="926 SAR">926 ريال</span>
                         </div>
-                        <div class="service-note">أناقة ونظافة دائمة</div>
+                        <div class="service-note" data-ar="أناقة ونظافة دائمة" data-en="Lasting elegance & cleanliness">أناقة ونظافة دائمة</div>
                     </div>
 
                     <div class="service-item package-item">
-                        <div class="service-name">باقة تنظيف الوجه والبشرة</div>
-                        <div class="service-desc">تنظيف الاسنان وإزالة طبقات الجير + تنظيف البشرة</div>
+                        <div class="service-name" data-ar="باقة تنظيف الوجه والبشرة" data-en="Face & Skin Cleaning Package">باقة تنظيف الوجه والبشرة</div>
+                        <div class="service-desc" data-ar="تنظيف الاسنان وإزالة طبقات الجير + تنظيف البشرة" data-en="Teeth cleaning & tartar removal + Skin cleaning">تنظيف الاسنان وإزالة طبقات الجير + تنظيف البشرة</div>
                         <div class="price-container">
-                            <span class="offer-price">226 ريال</span>
+                            <span class="offer-price" data-ar="226 ريال" data-en="226 SAR">226 ريال</span>
                         </div>
                     </div>
                 </div>
 
 <!-- عروض ليزر إزالة الشعر للنساء -->
-<h3 class="section-title">🌟 عروض ليزر إزالة الشعر للنساء - بداية 2026 🌟</h3>
+<h3 class="section-title" data-ar="🌟 عروض ليزر إزالة الشعر للنساء - بداية 2025 🌟" data-en="🌟 Women's Laser Hair Removal - Early 2025 🌟">🌟 عروض ليزر إزالة الشعر للنساء - بداية 2025 🌟</h3>
 <div class="services-grid">
     <div class="service-item">
-        <div class="service-name">جلسة ليزر جسم كامل + رتوش</div>
-        <div class="service-desc">جلسة ليزر كاملة للجسم مع الرتوش</div>
+        <div class="service-name" data-ar="جلسة ليزر جسم كامل + رتوش" data-en="Full Body Laser Session + Touch-ups">جلسة ليزر جسم كامل + رتوش</div>
+        <div class="service-desc" data-ar="جلسة ليزر كاملة للجسم مع الرتوش" data-en="Complete body laser session with touch-ups">جلسة ليزر كاملة للجسم مع الرتوش</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 42%</span>
-            <span class="offer-price">326 ريال</span>
+            <span class="discount-badge" data-ar="خصم 42%" data-en="42% OFF">خصم 42%</span>
+            <span class="offer-price" data-ar="326 ريال" data-en="326 SAR">326 ريال</span>
         </div>
-        <div class="service-note">عرض خاص للعام الجديد</div>
+        <div class="service-note" data-ar="عرض خاص للعام الجديد" data-en="New Year special offer">عرض خاص للعام الجديد</div>
     </div>
     <div class="service-item">
-        <div class="service-name">3 جلسات ليزر جسم كامل + رتوش</div>
-        <div class="service-desc">3 جلسات كاملة مع الرتوش + جلسة تشقير وجه وحواجب</div>
+        <div class="service-name" data-ar="3 جلسات ليزر جسم كامل + رتوش" data-en="3 Full Body Laser Sessions + Touch-ups">3 جلسات ليزر جسم كامل + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات كاملة مع الرتوش + جلسة تشقير وجه وحواجب" data-en="3 complete sessions with touch-ups + Face & eyebrow bleaching session">3 جلسات كاملة مع الرتوش + جلسة تشقير وجه وحواجب</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 36%</span>
-            <span class="offer-price">626 ريال</span>
+            <span class="discount-badge" data-ar="خصم 36%" data-en="36% OFF">خصم 36%</span>
+            <span class="offer-price" data-ar="626 ريال" data-en="626 SAR">626 ريال</span>
         </div>
-        <div class="service-note">الأكثر طلباً ⭐</div>
+        <div class="service-note" data-ar="الأكثر طلباً ⭐" data-en="Most requested ⭐">الأكثر طلباً ⭐</div>
     </div>
     <div class="service-item">
-        <div class="service-name">6 جلسات ليزر جسم كامل + رتوش</div>
-        <div class="service-desc">6 جلسات كاملة مع الرتوش + 2 جلسة تشقير وجه وحواجب مجانية</div>
+        <div class="service-name" data-ar="6 جلسات ليزر جسم كامل + رتوش" data-en="6 Full Body Laser Sessions + Touch-ups">6 جلسات ليزر جسم كامل + رتوش</div>
+        <div class="service-desc" data-ar="6 جلسات كاملة مع الرتوش + 2 جلسة تشقير وجه وحواجب مجانية" data-en="6 complete sessions with touch-ups + 2 free face & eyebrow bleaching sessions">6 جلسات كاملة مع الرتوش + 2 جلسة تشقير وجه وحواجب مجانية</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 42%</span>
-            <span class="offer-price">1626 ريال</span>
+            <span class="discount-badge" data-ar="خصم 42%" data-en="42% OFF">خصم 42%</span>
+            <span class="offer-price" data-ar="1626 ريال" data-en="1626 SAR">1626 ريال</span>
         </div>
-        <div class="service-note">عرض حصري 2026</div>
+        <div class="service-note" data-ar="عرض حصري 2025" data-en="Exclusive 2025 offer">عرض حصري 2025</div>
     </div>
     <div class="service-item">
-        <div class="service-name">جلسة ليزر جسم بدون ظهر وبطن + رتوش</div>
-        <div class="service-desc">جلسة ليزر شاملة عدا الظهر والبطن مع الرتوش</div>
+        <div class="service-name" data-ar="جلسة ليزر جسم بدون ظهر وبطن + رتوش" data-en="Laser Session Without Back & Abdomen + Touch-ups">جلسة ليزر جسم بدون ظهر وبطن + رتوش</div>
+        <div class="service-desc" data-ar="جلسة ليزر شاملة عدا الظهر والبطن مع الرتوش" data-en="Comprehensive laser session excluding back & abdomen with touch-ups">جلسة ليزر شاملة عدا الظهر والبطن مع الرتوش</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 36%</span>
-            <span class="offer-price">226 ريال</span>
+            <span class="discount-badge" data-ar="خصم 36%" data-en="36% OFF">خصم 36%</span>
+            <span class="offer-price" data-ar="226 ريال" data-en="226 SAR">226 ريال</span>
         </div>
-        <div class="service-note">مثالية للمبتدئين</div>
+        <div class="service-note" data-ar="مثالية للمبتدئين" data-en="Perfect for beginners">مثالية للمبتدئين</div>
     </div>
     <div class="service-item">
-        <div class="service-name">3 جلسات ليزر بدون ظهر وبطن + رتوش</div>
-        <div class="service-desc">3 جلسات شاملة عدا الظهر والبطن مع الرتوش</div>
+        <div class="service-name" data-ar="3 جلسات ليزر بدون ظهر وبطن + رتوش" data-en="3 Laser Sessions Without Back & Abdomen + Touch-ups">3 جلسات ليزر بدون ظهر وبطن + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات شاملة عدا الظهر والبطن مع الرتوش" data-en="3 comprehensive sessions excluding back & abdomen with touch-ups">3 جلسات شاملة عدا الظهر والبطن مع الرتوش</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 42%</span>
-            <span class="offer-price">526 ريال</span>
-        </div>
-    </div>
-    <div class="service-item">
-        <div class="service-name">جلسة ليزر منطقة كبيرة + رتوش</div>
-        <div class="service-desc">اختاري منطقة كبيرة (ساقين أو يدين أو ظهر)</div>
-        <div class="price-container">
-            <span class="discount-badge">خصم 32%</span>
-            <span class="offer-price">126 ريال</span>
+            <span class="discount-badge" data-ar="خصم 42%" data-en="42% OFF">خصم 42%</span>
+            <span class="offer-price" data-ar="526 ريال" data-en="526 SAR">526 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">3 جلسات ليزر منطقة كبيرة + رتوش</div>
-        <div class="service-desc">3 جلسات لمنطقة كبيرة من اختيارك</div>
+        <div class="service-name" data-ar="جلسة ليزر منطقة كبيرة + رتوش" data-en="Large Area Laser Session + Touch-ups">جلسة ليزر منطقة كبيرة + رتوش</div>
+        <div class="service-desc" data-ar="اختاري منطقة كبيرة (ساقين أو يدين أو ظهر)" data-en="Choose large area (legs, arms, or back)">اختاري منطقة كبيرة (ساقين أو يدين أو ظهر)</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 39%</span>
-            <span class="offer-price">299 ريال</span>
+            <span class="discount-badge" data-ar="خصم 32%" data-en="32% OFF">خصم 32%</span>
+            <span class="offer-price" data-ar="126 ريال" data-en="126 SAR">126 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">جلسة ليزر منطقة متوسطة + رتوش</div>
-        <div class="service-desc">اختاري منطقة متوسطة (بكيني أو إبط أو وجه)</div>
+        <div class="service-name" data-ar="3 جلسات ليزر منطقة كبيرة + رتوش" data-en="3 Large Area Laser Sessions + Touch-ups">3 جلسات ليزر منطقة كبيرة + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات لمنطقة كبيرة من اختيارك" data-en="3 sessions for large area of your choice">3 جلسات لمنطقة كبيرة من اختيارك</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 34%</span>
-            <span class="offer-price">99 ريال</span>
+            <span class="discount-badge" data-ar="خصم 39%" data-en="39% OFF">خصم 39%</span>
+            <span class="offer-price" data-ar="299 ريال" data-en="299 SAR">299 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">3 جلسات ليزر منطقة متوسطة + رتوش</div>
-        <div class="service-desc">3 جلسات لمنطقة متوسطة من اختيارك</div>
+        <div class="service-name" data-ar="جلسة ليزر منطقة متوسطة + رتوش" data-en="Medium Area Laser Session + Touch-ups">جلسة ليزر منطقة متوسطة + رتوش</div>
+        <div class="service-desc" data-ar="اختاري منطقة متوسطة (بكيني أو إبط أو وجه)" data-en="Choose medium area (bikini, underarm, or face)">اختاري منطقة متوسطة (بكيني أو إبط أو وجه)</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 38%</span>
-            <span class="offer-price">249 ريال</span>
+            <span class="discount-badge" data-ar="خصم 34%" data-en="34% OFF">خصم 34%</span>
+            <span class="offer-price" data-ar="99 ريال" data-en="99 SAR">99 ريال</span>
+        </div>
+    </div>
+    <div class="service-item">
+        <div class="service-name" data-ar="3 جلسات ليزر منطقة متوسطة + رتوش" data-en="3 Medium Area Laser Sessions + Touch-ups">3 جلسات ليزر منطقة متوسطة + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات لمنطقة متوسطة من اختيارك" data-en="3 sessions for medium area of your choice">3 جلسات لمنطقة متوسطة من اختيارك</div>
+        <div class="price-container">
+            <span class="discount-badge" data-ar="خصم 38%" data-en="38% OFF">خصم 38%</span>
+            <span class="offer-price" data-ar="249 ريال" data-en="249 SAR">249 ريال</span>
         </div>
     </div>
     <div class="service-item package-item">
-        <div class="service-name">باقة ليزر فاخرة</div>
-        <div class="service-desc">4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان</div>
+        <div class="service-name" data-ar="باقة ليزر فاخرة" data-en="Luxurious Laser Package">باقة ليزر فاخرة</div>
+        <div class="service-desc" data-ar="4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان" data-en="4 full body sessions + 2 Hydrafacial sessions + Teeth cleaning">4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 41%</span>
-            <span class="offer-price">999 ريال</span>
+            <span class="discount-badge" data-ar="خصم 41%" data-en="41% OFF">خصم 41%</span>
+            <span class="offer-price" data-ar="999 ريال" data-en="999 SAR">999 ريال</span>
         </div>
-        <div class="service-note">عرض العرائس 2026 💎</div>
+        <div class="service-note" data-ar="عرض العرائس 2025 💎" data-en="Bride's offer 2025 💎">عرض العرائس 2025 💎</div>
     </div>
 </div>
 
 <!-- عروض ليزر إزالة الشعر للرجال -->
-<h3 class="section-title">💪 عروض ليزر إزالة الشعر للرجال - بداية 2026 💪</h3>
+<h3 class="section-title" data-ar="💪 عروض ليزر إزالة الشعر للرجال - بداية 2025 💪" data-en="💪 Men's Laser Hair Removal - Early 2025 💪">💪 عروض ليزر إزالة الشعر للرجال - بداية 2025 💪</h3>
 <div class="services-grid">
     <div class="service-item">
-        <div class="service-name">باقة ليزر كاملة - جلسة واحدة</div>
-        <div class="service-desc">جلسة ليزر كاملة للجسم مع الرتوش</div>
+        <div class="service-name" data-ar="باقة ليزر كاملة - جلسة واحدة" data-en="Complete Laser Package - Single Session">باقة ليزر كاملة - جلسة واحدة</div>
+        <div class="service-desc" data-ar="جلسة ليزر كاملة للجسم مع الرتوش" data-en="Complete body laser session with touch-ups">جلسة ليزر كاملة للجسم مع الرتوش</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 32%</span>
-            <span class="offer-price">326 ريال</span>
+            <span class="discount-badge" data-ar="خصم 32%" data-en="32% OFF">خصم 32%</span>
+            <span class="offer-price" data-ar="326 ريال" data-en="326 SAR">326 ريال</span>
         </div>
-        <div class="service-note">الأكثر مبيعاً ⭐</div>
+        <div class="service-note" data-ar="الأكثر مبيعاً ⭐" data-en="Best seller ⭐">الأكثر مبيعاً ⭐</div>
     </div>
     <div class="service-item">
-        <div class="service-name">باقة ليزر كاملة - 3 جلسات</div>
-        <div class="service-desc">3 جلسة ليزر كاملة للجسم مع الرتوش</div>
+        <div class="service-name" data-ar="باقة ليزر كاملة - 3 جلسات" data-en="Complete Laser Package - 3 Sessions">باقة ليزر كاملة - 3 جلسات</div>
+        <div class="service-desc" data-ar="3 جلسة ليزر كاملة للجسم مع الرتوش" data-en="3 complete body laser sessions with touch-ups">3 جلسة ليزر كاملة للجسم مع الرتوش</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 38%</span>
-            <span class="offer-price">626 ريال</span>
+            <span class="discount-badge" data-ar="خصم 38%" data-en="38% OFF">خصم 38%</span>
+            <span class="offer-price" data-ar="626 ريال" data-en="626 SAR">626 ريال</span>
         </div>
-        <div class="service-note">وفر 571 ريال</div>
+        <div class="service-note" data-ar="وفر 571 ريال" data-en="Save 571 SAR">وفر 571 ريال</div>
     </div>
     <div class="service-item">
-        <div class="service-name">باقة ليزر كاملة - 6 جلسات</div>
-        <div class="service-desc">6 جلسات شاملة مع الرتوش + جلسة تنظيف بشرة مجانية</div>
+        <div class="service-name" data-ar="باقة ليزر كاملة - 6 جلسات" data-en="Complete Laser Package - 6 Sessions">باقة ليزر كاملة - 6 جلسات</div>
+        <div class="service-desc" data-ar="6 جلسات شاملة مع الرتوش + جلسة تنظيف بشرة مجانية" data-en="6 comprehensive sessions with touch-ups + Free skin cleaning session">6 جلسات شاملة مع الرتوش + جلسة تنظيف بشرة مجانية</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 43%</span>
-            <span class="offer-price">1626 ريال</span>
+            <span class="discount-badge" data-ar="خصم 43%" data-en="43% OFF">خصم 43%</span>
+            <span class="offer-price" data-ar="1626 ريال" data-en="1626 SAR">1626 ريال</span>
         </div>
-        <div class="service-note">عرض السنة الجديدة</div>
+        <div class="service-note" data-ar="عرض السنة الجديدة" data-en="New Year offer">عرض السنة الجديدة</div>
     </div>
     <div class="service-item">
-        <div class="service-name">جلسة ليزر منطقة كبيرة + رتوش</div>
-        <div class="service-desc">اختر منطقة: ظهر أو صدر وبطن</div>
+        <div class="service-name" data-ar="جلسة ليزر منطقة كبيرة + رتوش" data-en="Large Area Laser Session + Touch-ups">جلسة ليزر منطقة كبيرة + رتوش</div>
+        <div class="service-desc" data-ar="اختر منطقة: ظهر أو صدر وبطن" data-en="Choose area: Back or chest & abdomen">اختر منطقة: ظهر أو صدر وبطن</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 37%</span>
-            <span class="offer-price">162 ريال</span>
-        </div>
-    </div>
-    <div class="service-item">
-        <div class="service-name">3 جلسات ليزر منطقة كبيرة + رتوش</div>
-        <div class="service-desc">3 جلسات لمنطقة كبيرة من اختيارك</div>
-        <div class="price-container">
-            <span class="discount-badge">خصم 46%</span>
-            <span class="offer-price">399 ريال</span>
+            <span class="discount-badge" data-ar="خصم 37%" data-en="37% OFF">خصم 37%</span>
+            <span class="offer-price" data-ar="162 ريال" data-en="162 SAR">162 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">جلسة ليزر منطقة صغيرة + رتوش</div>
-        <div class="service-desc">اختر منطقة: إبط أو تحديد ذقن أو بوكسر</div>
+        <div class="service-name" data-ar="3 جلسات ليزر منطقة كبيرة + رتوش" data-en="3 Large Area Laser Sessions + Touch-ups">3 جلسات ليزر منطقة كبيرة + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات لمنطقة كبيرة من اختيارك" data-en="3 sessions for large area of your choice">3 جلسات لمنطقة كبيرة من اختيارك</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 7%</span>
-            <span class="offer-price">126 ريال</span>
+            <span class="discount-badge" data-ar="خصم 46%" data-en="46% OFF">خصم 46%</span>
+            <span class="offer-price" data-ar="399 ريال" data-en="399 SAR">399 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">3 جلسات ليزر منطقة صغيرة + رتوش</div>
-        <div class="service-desc">3 جلسات لمنطقة صغيرة من اختيارك</div>
+        <div class="service-name" data-ar="جلسة ليزر منطقة صغيرة + رتوش" data-en="Small Area Laser Session + Touch-ups">جلسة ليزر منطقة صغيرة + رتوش</div>
+        <div class="service-desc" data-ar="اختر منطقة: إبط أو تحديد ذقن أو بوكسر" data-en="Choose area: Underarm, beard line, or boxer">اختر منطقة: إبط أو تحديد ذقن أو بوكسر</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 16%</span>
-            <span class="offer-price">326 ريال</span>
+            <span class="discount-badge" data-ar="خصم 7%" data-en="7% OFF">خصم 7%</span>
+            <span class="offer-price" data-ar="126 ريال" data-en="126 SAR">126 ريال</span>
         </div>
     </div>
     <div class="service-item">
-        <div class="service-name">باقة ليزر مناطق حساسة إبط وبوكسر</div>
-        <div class="service-desc">باقة ليزر مناطق حساسة إبط وبوكسر</div>
+        <div class="service-name" data-ar="3 جلسات ليزر منطقة صغيرة + رتوش" data-en="3 Small Area Laser Sessions + Touch-ups">3 جلسات ليزر منطقة صغيرة + رتوش</div>
+        <div class="service-desc" data-ar="3 جلسات لمنطقة صغيرة من اختيارك" data-en="3 sessions for small area of your choice">3 جلسات لمنطقة صغيرة من اختيارك</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 36%</span>
-            <span class="offer-price">162 ريال</span>
+            <span class="discount-badge" data-ar="خصم 16%" data-en="16% OFF">خصم 16%</span>
+            <span class="offer-price" data-ar="326 ريال" data-en="326 SAR">326 ريال</span>
         </div>
-        <div class="service-note">إطلالة مثالية 2026</div>
+    </div>
+    <div class="service-item">
+        <div class="service-name" data-ar="باقة ليزر مناطق حساسة إبط وبوكسر" data-en="Sensitive Areas Laser Package (Underarm & Boxer)">باقة ليزر مناطق حساسة إبط وبوكسر</div>
+        <div class="service-desc" data-ar="باقة ليزر مناطق حساسة إبط وبوكسر" data-en="Sensitive areas laser package underarm & boxer">باقة ليزر مناطق حساسة إبط وبوكسر</div>
+        <div class="price-container">
+            <span class="discount-badge" data-ar="خصم 36%" data-en="36% OFF">خصم 36%</span>
+            <span class="offer-price" data-ar="162 ريال" data-en="162 SAR">162 ريال</span>
+        </div>
+        <div class="service-note" data-ar="إطلالة مثالية 2025" data-en="Perfect look 2025">إطلالة مثالية 2025</div>
     </div>
     <div class="service-item package-item">
-        <div class="service-name">باقة ليزر فاخرة</div>
-        <div class="service-desc">4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان</div>
+        <div class="service-name" data-ar="باقة ليزر فاخرة" data-en="Luxurious Laser Package">باقة ليزر فاخرة</div>
+        <div class="service-desc" data-ar="4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان" data-en="4 full body sessions + 2 Hydrafacial sessions + Teeth cleaning">4 جلسات جسم كامل + 2 جلسة هايدرافيشال + تنظيف اسنان</div>
         <div class="price-container">
-            <span class="discount-badge">خصم 41%</span>
-            <span class="offer-price">999 ريال</span>
+            <span class="discount-badge" data-ar="خصم 41%" data-en="41% OFF">خصم 41%</span>
+            <span class="offer-price" data-ar="999 ريال" data-en="999 SAR">999 ريال</span>
         </div>
-        <div class="service-note">عرض العرائس 2026 💎</div>
+        <div class="service-note" data-ar="عرض العرائس 2025 💎" data-en="Groom's offer 2025 💎">عرض العرائس 2025 💎</div>
     </div>
 </div>
 
                 <!-- عروض حقن الفيلر -->
-                <h3 class="section-title">✨ عروض حقن الفيلر - بداية 2026 ✨</h3>
+                <h3 class="section-title" data-ar="✨ عروض حقن الفيلر - بداية 2025 ✨" data-en="✨ Filler Injection Offers - Early 2025 ✨">✨ عروض حقن الفيلر - بداية 2025 ✨</h3>
                 <div class="services-grid">
                     <div class="service-item">
-                        <div class="service-name">فيلر 1 مل آرت فيلر</div>
-                        <div class="service-desc">حقن فيلر 1 مل - نوع آرت فيلر</div>
+                        <div class="service-name" data-ar="فيلر 1 مل آرت فيلر" data-en="1ml Art Filler">فيلر 1 مل آرت فيلر</div>
+                        <div class="service-desc" data-ar="حقن فيلر 1 مل - نوع آرت فيلر" data-en="1ml filler injection - Art Filler type">حقن فيلر 1 مل - نوع آرت فيلر</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 55%</span>
-                            <span class="offer-price">626 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 55%" data-en="55% OFF">خصم 55%</span>
+                            <span class="offer-price" data-ar="626 ريال" data-en="626 SAR">626 ريال</span>
                         </div>
-                        <div class="service-note">الأكثر شهرة ⭐</div>
+                        <div class="service-note" data-ar="الأكثر شهرة ⭐" data-en="Most popular ⭐">الأكثر شهرة ⭐</div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فيلر 2 مل آرت فيلر</div>
-                        <div class="service-desc">حقن فيلر 2 مل - نوع آرت فيلر + تشقير مجاني</div>
+                        <div class="service-name" data-ar="فيلر 2 مل آرت فيلر" data-en="2ml Art Filler">فيلر 2 مل آرت فيلر</div>
+                        <div class="service-desc" data-ar="حقن فيلر 2 مل - نوع آرت فيلر + تشقير مجاني" data-en="2ml filler injection - Art Filler type + Free bleaching">حقن فيلر 2 مل - نوع آرت فيلر + تشقير مجاني</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 57%</span>
-                            <span class="offer-price">1226 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 57%" data-en="57% OFF">خصم 57%</span>
+                            <span class="offer-price" data-ar="1226 ريال" data-en="1226 SAR">1226 ريال</span>
                         </div>
-                        <div class="service-note">وفر 1701 ريال</div>
+                        <div class="service-note" data-ar="وفر 1701 ريال" data-en="Save 1701 SAR">وفر 1701 ريال</div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فيلر 3 مل آرت فيلر</div>
-                        <div class="service-desc">حقن فيلر 3 مل + تشقير وجه وحواجب مجاناً</div>
+                        <div class="service-name" data-ar="فيلر 3 مل آرت فيلر" data-en="3ml Art Filler">فيلر 3 مل آرت فيلر</div>
+                        <div class="service-desc" data-ar="حقن فيلر 3 مل + تشقير وجه وحواجب مجاناً" data-en="3ml filler injection + Free face & eyebrow bleaching">حقن فيلر 3 مل + تشقير وجه وحواجب مجاناً</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 57%</span>
-                            <span class="offer-price">1626 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 57%" data-en="57% OFF">خصم 57%</span>
+                            <span class="offer-price" data-ar="1626 ريال" data-en="1626 SAR">1626 ريال</span>
                         </div>
-                        <div class="service-note">عرض العام الجديد</div>
+                        <div class="service-note" data-ar="عرض العام الجديد" data-en="New Year offer">عرض العام الجديد</div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فيلر 1 مل توسيال</div>
-                        <div class="service-desc">حقن فيلر 1 مل - نوع توسيال الفاخر</div>
+                        <div class="service-name" data-ar="فيلر 1 مل توسيال" data-en="1ml Teosyal">فيلر 1 مل توسيال</div>
+                        <div class="service-desc" data-ar="حقن فيلر 1 مل - نوع توسيال الفاخر" data-en="1ml filler injection - Premium Teosyal type">حقن فيلر 1 مل - نوع توسيال الفاخر</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 56%</span>
-                            <span class="offer-price">879 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 56%" data-en="56% OFF">خصم 56%</span>
+                            <span class="offer-price" data-ar="879 ريال" data-en="879 SAR">879 ريال</span>
                         </div>
-                        <div class="service-note">جودة عالمية 💎</div>
+                        <div class="service-note" data-ar="جودة عالمية 💎" data-en="World-class quality 💎">جودة عالمية 💎</div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فيلر 2 مل توسيال</div>
-                        <div class="service-desc">حقن فيلر 2 مل - نوع توسيال + جلسة ديرمابن</div>
+                        <div class="service-name" data-ar="فيلر 2 مل توسيال" data-en="2ml Teosyal">فيلر 2 مل توسيال</div>
+                        <div class="service-desc" data-ar="حقن فيلر 2 مل - نوع توسيال + جلسة ديرمابن" data-en="2ml filler injection - Teosyal type + Dermapen session">حقن فيلر 2 مل - نوع توسيال + جلسة ديرمابن</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 58%</span>
-                            <span class="offer-price">1626 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 58%" data-en="58% OFF">خصم 58%</span>
+                            <span class="offer-price" data-ar="1626 ريال" data-en="1626 SAR">1626 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">فيلر 3 مل توسيال</div>
-                        <div class="service-desc">حقن فيلر 3 مل - نوع توسيال الفاخر</div>
+                        <div class="service-name" data-ar="فيلر 3 مل توسيال" data-en="3ml Teosyal">فيلر 3 مل توسيال</div>
+                        <div class="service-desc" data-ar="حقن فيلر 3 مل - نوع توسيال الفاخر" data-en="3ml filler injection - Premium Teosyal type">حقن فيلر 3 مل - نوع توسيال الفاخر</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 58%</span>
-                            <span class="offer-price">2526 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 58%" data-en="58% OFF">خصم 58%</span>
+                            <span class="offer-price" data-ar="2526 ريال" data-en="2526 SAR">2526 ريال</span>
                         </div>
-                        <div class="service-note">الأفضل قيمة</div>
+                        <div class="service-note" data-ar="الأفضل قيمة" data-en="Best value">الأفضل قيمة</div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة الشفاه المثالية</div>
-                        <div class="service-desc">فيلر 1 مل للشفاه + بوتكس حول الفم</div>
+                        <div class="service-name" data-ar="باقة الشفاه المثالية" data-en="Perfect Lips Package">باقة الشفاه المثالية</div>
+                        <div class="service-desc" data-ar="فيلر 1 مل للشفاه + بوتكس حول الفم" data-en="1ml lip filler + Botox around mouth">فيلر 1 مل للشفاه + بوتكس حول الفم</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 41%</span>
-                            <span class="offer-price">1226 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 41%" data-en="41% OFF">خصم 41%</span>
+                            <span class="offer-price" data-ar="1226 ريال" data-en="1226 SAR">1226 ريال</span>
                         </div>
-                        <div class="service-note">شفاه طبيعية جذابة 💋</div>
+                        <div class="service-note" data-ar="شفاه طبيعية جذابة 💋" data-en="Natural attractive lips 💋">شفاه طبيعية جذابة 💋</div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة الخدود والفك</div>
-                        <div class="service-desc">فيلر 2 مل للخدود + نحت الفك</div>
+                        <div class="service-name" data-ar="باقة الخدود والفك" data-en="Cheeks & Jaw Package">باقة الخدود والفك</div>
+                        <div class="service-desc" data-ar="فيلر 2 مل للخدود + نحت الفك" data-en="2ml cheek filler + Jaw sculpting">فيلر 2 مل للخدود + نحت الفك</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 44%</span>
-                            <span class="offer-price">2426 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 44%" data-en="44% OFF">خصم 44%</span>
+                            <span class="offer-price" data-ar="2426 ريال" data-en="2426 SAR">2426 ريال</span>
                         </div>
-                        <div class="service-note">نحت الوجه المثالي</div>
+                        <div class="service-note" data-ar="نحت الوجه المثالي" data-en="Perfect face sculpting">نحت الوجه المثالي</div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة النضارة الكاملة</div>
-                        <div class="service-desc">فيلر 1 مل + بوتكس جبهة وعيون + هايدرافيشال</div>
+                        <div class="service-name" data-ar="باقة النضارة الكاملة" data-en="Complete Radiance Package">باقة النضارة الكاملة</div>
+                        <div class="service-desc" data-ar="فيلر 1 مل + بوتكس جبهة وعيون + هايدرافيشال" data-en="1ml filler + Forehead & eyes Botox + Hydrafacial">فيلر 1 مل + بوتكس جبهة وعيون + هايدرافيشال</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 46%</span>
-                            <span class="offer-price">1326 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 46%" data-en="46% OFF">خصم 46%</span>
+                            <span class="offer-price" data-ar="1326 ريال" data-en="1326 SAR">1326 ريال</span>
                         </div>
-                        <div class="service-note">إطلالة شابة مشرقة ✨</div>
+                        <div class="service-note" data-ar="إطلالة شابة مشرقة ✨" data-en="Youthful radiant look ✨">إطلالة شابة مشرقة ✨</div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة تحت العين الماسية</div>
-                        <div class="service-desc">فيلر تحت العين 1 مل + ميزوثيرابي + ديرمابن</div>
+                        <div class="service-name" data-ar="باقة تحت العين الماسية" data-en="Diamond Under Eye Package">باقة تحت العين الماسية</div>
+                        <div class="service-desc" data-ar="فيلر تحت العين 1 مل + ميزوثيرابي + ديرمابن" data-en="1ml under-eye filler + Mesotherapy + Dermapen">فيلر تحت العين 1 مل + ميزوثيرابي + ديرمابن</div>
                         <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">1026 ريال</span>
+                            <span class="discount-badge" data-ar="خصم 40%" data-en="40% OFF">خصم 40%</span>
+                            <span class="offer-price" data-ar="1026 ريال" data-en="1026 SAR">1026 ريال</span>
                         </div>
-                        <div class="service-note">تخلصي من الهالات</div>
+                        <div class="service-note" data-ar="تخلصي من الهالات" data-en="Eliminate dark circles">تخلصي من الهالات</div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">تذويب الفيلر</div>
+                        <div class="service-name" data-ar="تذويب الفيلر" data-en="Filler Dissolving">تذويب الفيلر</div>
                         <div class="price-container">
-                            <span class="offer-price">149 ريال</span>
+                            <span class="offer-price" data-ar="149 ريال" data-en="149 SAR">149 ريال</span>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- عروض حقن البوتكس -->
-                <h3 class="section-title">💫 عروض حقن البوتكس - بداية 2026 💫</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">بوتكس كامل الوجه</div>
-                        <div class="service-desc">بوتكس شامل لكامل الوجه</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 35%</span>
-                            <span class="offer-price">926 ريال</span>
-                        </div>
-                        <div class="service-note">الأكثر شمولاً</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس الجبهة وحول العين</div>
-                        <div class="service-desc">بوتكس للجبهة والتجاعيد حول العين</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 35%</span>
-                            <span class="offer-price">726 ريال</span>
-                        </div>
-                        <div class="service-note">الأكثر طلباً ⭐</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس تجاعيد الجبهة</div>
-                        <div class="service-desc">بوتكس لتجاعيد الجبهة فقط</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس الوجه والرقبة</div>
-                        <div class="service-desc">بوتكس شامل للوجه والرقبة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 38%</span>
-                            <span class="offer-price">1126 ريال</span>
-                        </div>
-                        <div class="service-note">حل شامل للتجاعيد</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس فرط التعرق</div>
-                        <div class="service-desc">بوتكس لعلاج التعرق الزائد</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 34%</span>
-                            <span class="offer-price">1126 ريال</span>
-                        </div>
-                        <div class="service-note">راحة دائمة</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس رفع الحاجب</div>
-                        <div class="service-desc">بوتكس لرفع الحاجب ونظرة شابة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 35%</span>
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس الابتسامة اللثوية</div>
-                        <div class="service-desc">بوتكس لتحسين الابتسامة اللثوية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 52%</span>
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                        <div class="service-note">ابتسامة مثالية 😊</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">بوتكس تصغير فتحات الأنف</div>
-                        <div class="service-desc">بوتكس لتصغير فتحات الأنف</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 52%</span>
-                            <span class="offer-price">226 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ميزوبوتكس للمسامات</div>
-                        <div class="service-desc">بوتكس دقيق لتصغير المسامات الواسعة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 36%</span>
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                        <div class="service-note">بشرة ناعمة</div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة الشباب الدائم</div>
-                        <div class="service-desc">بوتكس وجه + فيلر 1 مل + هايدرافيشال + ميزو</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 43%</span>
-                            <span class="offer-price">1526 ريال</span>
-                        </div>
-                        <div class="service-note">عرض متكامل 2026 💎</div>
-                    </div>
-                </div>
-
-                <!-- عروض حقن النضارة -->
-                <h3 class="section-title">🌸 عروض حقن النضارة - بداية 2026 🌸</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">إبرة الاكسوزوم</div>
-                        <div class="service-desc">إبرة الاكسوزوم لتجديد البشرة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 35%</span>
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                        <div class="service-note">تقنية حديثة</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة السلمون</div>
-                        <div class="service-desc">إبرة السلمون للنضارة والشباب</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 25%</span>
-                            <span class="offer-price">926 ريال</span>
-                        </div>
-                        <div class="service-note">نضارة طبيعية</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة سيفيرا (محفزات كولاجين)</div>
-                        <div class="service-desc">إبرة سيفيرا لتحفيز الكولاجين العميق</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 25%</span>
-                            <span class="offer-price">2226 ريال</span>
-                        </div>
-                        <div class="service-note">نتائج طويلة الأمد</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة الريتش</div>
-                        <div class="service-desc">إبرة الريتش للنضارة الفاخرة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 30%</span>
-                            <span class="offer-price">2626 ريال</span>
-                        </div>
-                        <div class="service-note">رفاهية حقيقية 💎</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة النضارة الياقوت</div>
-                        <div class="service-desc">إبرة النضارة الياقوت للإشراق الفوري</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 28%</span>
-                            <span class="offer-price">1026 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة النضارة دوروثي</div>
-                        <div class="service-desc">إبرة النضارة دوروثي الكورية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 28%</span>
-                            <span class="offer-price">1026 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة النضارة السبع نجوم</div>
-                        <div class="service-desc">إبرة السبع نجوم 2 مل</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 36%</span>
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                        <div class="service-note">الأكثر مبيعاً ⭐</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة ديفا الذهبية</div>
-                        <div class="service-desc">إبرة النضارة ديفا الذهبية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 27%</span>
-                            <span class="offer-price">826 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة ديفا البلاتينيوم</div>
-                        <div class="service-desc">إبرة النضارة ديفا البلاتينيوم</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 27%</span>
-                            <span class="offer-price">826 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة ديفا الفضية</div>
-                        <div class="service-desc">إبرة النضارة ديفا الفضية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 20%</span>
-                            <span class="offer-price">826 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة الرادييس لليدين</div>
-                        <div class="service-desc">إبرة الرادييس لنضارة وشد اليدين</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 34%</span>
-                            <span class="offer-price">2626 ريال</span>
-                        </div>
-                        <div class="service-note">يدين شابتين ✨</div>
-                    </div>
-                </div>
-
-                <!-- عروض حقن التفتيح -->
-                <h3 class="section-title">🌟 عروض حقن التفتيح - بداية 2026 🌟</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">إبرة إنوفيال 1 مل</div>
-                        <div class="service-desc">إبرة إنوفيال 1 مل للتفتيح والنضارة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                        <div class="service-note">تفتيح سريع</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">إبرة إنوفيال 3 مل</div>
-                        <div class="service-desc">إبرة إنوفيال 3 مل للتفتيح والنضارة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 34%</span>
-                            <span class="offer-price">926 ريال</span>
-                        </div>
-                        <div class="service-note">الأفضل قيمة</div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تفتيح الجسم</div>
-                        <div class="service-desc">5 جلسات تفتيح للمناطق الحساسة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">1326 ريال</span>
-                        </div>
-                        <div class="service-note">ثقة كاملة</div>
-                    </div>
-                </div>
-
-                <!-- عروض العناية بالبشرة -->
-                <h3 class="section-title">🧖♀️ عروض العناية بالبشرة - بداية 2026 🧖♀️</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">جلسة هايدرافيشال + ماسك</div>
-                        <div class="service-desc">تنظيف عميق بجهاز الهايدرافيشال + ماسك مغذي</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 43%</span>
-                            <span class="offer-price">199 ريال</span>
-                        </div>
-                        <div class="service-note">الأكثر طلباً ⭐</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات هايدرافيشال</div>
-                        <div class="service-desc">3 جلسات تنظيف عميق هايدرافيشال + ماسك</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 48%</span>
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">5 جلسات هايدرافيشال</div>
-                        <div class="service-desc">5 جلسات + ميزوثيرابي مجاني</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 49%</span>
-                            <span class="offer-price">826 ريال</span>
-                        </div>
-                        <div class="service-note">عرض السنة الجديدة</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ديرمابن + بلازما</div>
-                        <div class="service-desc">ديرمابن + بلازما غنية بالصفائح</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">479 ريال</span>
-                        </div>
-                        <div class="service-note">تجديد عميق</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ديرمابن + خلايا جذعية</div>
-                        <div class="service-desc">ديرمابن + سيروم خلايا جذعية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 36%</span>
-                            <span class="offer-price">479 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ديرمابن + إكسوزوم</div>
-                        <div class="service-desc">ديرمابن + إبرة إكسوزوم</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 45%</span>
-                            <span class="offer-price">579 ريال</span>
-                        </div>
-                        <div class="service-note">تقنية متطورة</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات ديرمابن كاملة</div>
-                        <div class="service-desc">3 جلسات ديرمابن + ميزو + جلسة هايدرافيشال مجانية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 44%</span>
-                            <span class="offer-price">999 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تشقير وجه وحواجب</div>
-                        <div class="service-desc">تشقير وجه وحواجب</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 36%</span>
-                            <span class="offer-price">126 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة العناية الشهرية</div>
-                        <div class="service-desc">هايدرافيشال + ديرمابن + تشقير + إبرة نضارة</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">1199 ريال</span>
-                        </div>
-                        <div class="service-note">عناية شاملة شهرية 💎</div>
-                    </div>
-                </div>
-
-                <!-- عروض علاج حب الشباب والندبات -->
-                <h3 class="section-title">🎯 عروض علاج حب الشباب والندبات - 2026 🎯</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">جلسة فراكشنال ليزر - وجه</div>
-                        <div class="service-desc">فراكشنال ليزر لعلاج آثار حب الشباب</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">226 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات فراكشنال + ميزو مجاناً</div>
-                        <div class="service-desc">3 جلسات فراكشنال + جلسة ميزو مجانية</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 43%</span>
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                        <div class="service-note">الأفضل قيمة</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">5 جلسات فراكشنال - برنامج كامل</div>
-                        <div class="service-desc">5 جلسات فراكشنال + 2 ميزو</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 45%</span>
-                            <span class="offer-price">1099 ريال</span>
-                        </div>
-                        <div class="service-note">حل نهائي للندبات</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة فراكشنال - منطقة من الجسم</div>
-                        <div class="service-desc">فراكشنال لعلاج آثار الجسم (ظهر/صدر)</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 37%</span>
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة القضاء على الندبات</div>
-                        <div class="service-desc">فراكشنال + بلازما + إكسوزوم + ديرمابن</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 44%</span>
-                            <span class="offer-price">926 ريال</span>
-                        </div>
-                        <div class="service-note">بشرة صافية نقية ✨</div>
-                    </div>
-                </div>
-
-                <!-- عروض التقشير البارد -->
-                <h3 class="section-title">💎 عروض التقشير البارد - 2026 💎</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد الركب أو الأكواع</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد منطقة الظهر</div>
-                        <div class="price-container">
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تقشير بارد منطقة الوجه أو الرقبة</div>
-                        <div class="price-container">
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- عروض إزالة التاتو بالليزر -->
-                <h3 class="section-title">🔥 عروض إزالة التاتو بالليزر - 2026 🔥</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">جلسة ليزر تاتو - منطقة صغيرة</div>
-                        <div class="service-desc">إزالة تاتو صغير (أقل من 5 سم)</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 44%</span>
-                            <span class="offer-price">139 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ليزر تاتو - منطقة متوسطة</div>
-                        <div class="service-desc">إزالة تاتو متوسط (5-10 سم)</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 40%</span>
-                            <span class="offer-price">239 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة ليزر تاتو - منطقة كبيرة</div>
-                        <div class="service-desc">إزالة تاتو كبير (أكثر من 10 سم)</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 44%</span>
-                            <span class="offer-price">339 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات تاتو - منطقة صغيرة</div>
-                        <div class="service-desc">3 جلسات لتاتو صغير</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 47%</span>
-                            <span class="offer-price">399 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات تاتو - منطقة متوسطة</div>
-                        <div class="service-desc">3 جلسات لتاتو متوسط</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 45%</span>
-                            <span class="offer-price">659 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">3 جلسات تاتو - منطقة كبيرة</div>
-                        <div class="service-desc">3 جلسات لتاتو كبير</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 47%</span>
-                            <span class="offer-price">949 ريال</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- عروض شد الوجه والنحت -->
-                <h3 class="section-title">💎 عروض شد الوجه والنحت - 2026 💎</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-name">إبرة تذويب اللغلوغ</div>
-                        <div class="service-desc">حقن لتذويب الدهون تحت الذقن</div>
-                        <div class="price-container">
-                            <span class="discount-badge">خصم 35%</span>
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                        <div class="service-note">تخلصي من اللغلوغ ✨</div>
-                    </div>
-                </div>
-
+<!-- Continue in next part... -->
             </div>
 
             <!-- Nutrition Services -->
             <div class="clinic-section" id="nutrition">
-                <h3 class="section-title">عروض التغذية</h3>
+                <h3 class="section-title" data-ar="عروض التغذية" data-en="Nutrition Offers">عروض التغذية</h3>
                 <div class="services-grid">
                     <div class="service-item">
-                        <div class="service-name">قياس انبودي و كشف</div>
+                        <div class="service-name" data-ar="قياس انبودي و كشف" data-en="InBody Measurement & Consultation">قياس انبودي و كشف</div>
                         <div class="price-container">
-                            <span class="offer-price">26 ريال</span>
+                            <span class="offer-price" data-ar="26 ريال" data-en="26 SAR">26 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">نظام إصلاح مقاومتك للأنسولين</div>
-                        <div class="service-desc">استشارة + قياس انبودي + نظام غذائي + ملف وصفات محسوب السعرات + تحليل سكر دم عشوائي</div>
+                        <div class="service-name" data-ar="نظام إصلاح مقاومتك للأنسولين" data-en="Insulin Resistance Repair Program">نظام إصلاح مقاومتك للأنسولين</div>
+                        <div class="service-desc" data-ar="استشارة + قياس انبودي + نظام غذائي + ملف وصفات محسوب السعرات + تحليل سكر دم عشوائي" data-en="Consultation + InBody measurement + Diet plan + Calculated recipes file + Random blood sugar test">استشارة + قياس انبودي + نظام غذائي + ملف وصفات محسوب السعرات + تحليل سكر دم عشوائي</div>
                         <div class="price-container">
-                            <span class="offer-price">226 ريال</span>
+                            <span class="offer-price" data-ar="226 ريال" data-en="226 SAR">226 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة نحت الجسم</div>
-                        <div class="service-desc">جلسة لايبوسيل + ابرة اذابة دهون + قياس انبودي ونظام غذائي + تحليل سكر دم عشوائي</div>
+                        <div class="service-name" data-ar="باقة نحت الجسم" data-en="Body Sculpting Package">باقة نحت الجسم</div>
+                        <div class="service-desc" data-ar="جلسة لايبوسيل + ابرة اذابة دهون + قياس انبودي ونظام غذائي + تحليل سكر دم عشوائي" data-en="Lipocell session + Fat dissolving injection + InBody & diet plan + Random blood sugar test">جلسة لايبوسيل + ابرة اذابة دهون + قياس انبودي ونظام غذائي + تحليل سكر دم عشوائي</div>
                         <div class="price-container">
-                            <span class="offer-price">1126 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">اشتراك 3 شهور + شهر مجاناً</div>
-                        <div class="service-desc">اشتراك 3 شهور + شهر مجانا + قياس انبودي لصديق لك</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">جلسة لايبوسيل</div>
-                        <div class="service-desc">جلسة لايبوسيل + نظام غذائي مجانا</div>
-                        <div class="price-container">
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة اربع جلسات لايبوسيل</div>
-                        <div class="service-desc">اربع جلسات لايبوسيل + تحليل فيتامين دال + قياس انبودي لصديق لك</div>
-                        <div class="price-container">
-                            <span class="offer-price">926 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">تحدي الثلاث شهور</div>
-                        <div class="service-desc">نظام لمدة 3 شهور + تصميم حمية خاصة + متابعة يومية اونلاين + زيارة كل اسبوعين في العيادة + ارفاق ملفات ارشادية + تطبيق رياضي + التوعية والتعليم على الغذاء السليم في كل جلسة + هدية احضار شخص لتجربة استشارة</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة متابعة فقر الدم</div>
-                        <div class="service-desc">زيارتين قياس Inbody + تحليل مخزون الحديد + تحليل صورة دم + تحليل نسبة الحديد</div>
-                        <div class="price-container">
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تساقط الشعر</div>
-                        <div class="service-desc">نظام غذائي + تحليل صورة الدم + تحليل نسبة الحديد + تحليل مخزون الحديد + تحليل نسبة الزنك + تحليل هرمون الغدة الدرقية + تحليل فيتامين دال + تحليل فيتامين B12</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة الغدة الدرقية</div>
-                        <div class="service-desc">نظام غذائي + متابعة + قياس انبودي + تحليل T3 + تحليل T4 + تحليل TSH</div>
-                        <div class="price-container">
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة التغذية المتكاملة اونلاين</div>
-                        <div class="service-desc">مدة 3 شهور الكشفية اونلاين + قراءة التحاليل + متابعة اونلاين اتصال اسبوعيا + جدول غذائي وخطة علاجية + ملف وصفات صحية</div>
-                        <div class="price-container">
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تكيس المبايض</div>
-                        <div class="service-desc">نظام غذائي + متابعة يومية اونلاين لمدة شهر + تحليل FSH + تحليل LH + تحليل برولاكتين</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة ابر التنحيف</div>
-                        <div class="service-desc">نظام غذائي + تحليل CBC + تحليل VD + تحليل TSH + تحليل FERRITIN + تحليل VB12 + تحليل انزيمات الكبد + تحليل وظائف الكلى</div>
-                        <div class="price-container">
-                            <span class="offer-price">626 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">الباقة الفضية</div>
-                        <div class="service-desc">نظام غذائي + استشارة + قياس in body + لمدة شهر</div>
-                        <div class="price-container">
-                            <span class="offer-price">226 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة تحاليل الرشاقة</div>
-                        <div class="service-desc">كشف + قياس انبودي + cbc + tsh + فيريتين + حديد + بي ١٢ + فيتامين د</div>
-                        <div class="price-container">
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">الباقة الذهبية</div>
-                        <div class="service-desc">نظام غذائي + استشارة + قياس in body + لمدة شهر + مع متابعة اون لاين</div>
-                        <div class="price-container">
-                            <span class="offer-price">326 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item package-item">
-                        <div class="service-name">باقة طلتي غير</div>
-                        <div class="service-desc">العرض الحديد: جلستين لايبوسيل + ابرة اذابة دهون + قياس انبودي + تحليل سكر دم عشوائي</div>
-                        <div class="price-container">
-                            <span class="offer-price">1126 ريال</span>
+                            <span class="offer-price" data-ar="1126 ريال" data-en="1126 SAR">1126 ريال</span>
                         </div>
                     </div>
                 </div>
@@ -979,91 +444,37 @@
 
             <!-- Dental Services -->
             <div class="clinic-section" id="dental">
-                <h3 class="section-title">عروض الأسنان</h3>
+                <h3 class="section-title" data-ar="عروض الأسنان" data-en="Dental Offers">عروض الأسنان</h3>
                 <div class="services-grid">
                     <div class="service-item">
-                        <div class="service-name">الكشف والاشعة التشخيصية</div>
+                        <div class="service-name" data-ar="الكشف والاشعة التشخيصية" data-en="Examination & Diagnostic X-ray">الكشف والاشعة التشخيصية</div>
                         <div class="price-container">
-                            <span class="free-price">مجاناً</span>
+                            <span class="free-price" data-ar="مجاناً" data-en="FREE">مجاناً</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">تنظيف الاسنان وإزالة طبقات الجير</div>
+                        <div class="service-name" data-ar="تنظيف الاسنان وإزالة طبقات الجير" data-en="Teeth Cleaning & Tartar Removal">تنظيف الاسنان وإزالة طبقات الجير</div>
                         <div class="price-container">
-                            <span class="offer-price">150 ريال</span>
+                            <span class="offer-price" data-ar="150 ريال" data-en="150 SAR">150 ريال</span>
                         </div>
                     </div>
                     <div class="service-item package-item">
-                        <div class="service-name">باقة تبييض وتنظيف الاسنان وإزالة الجير والتلميع</div>
+                        <div class="service-name" data-ar="باقة تبييض وتنظيف الاسنان وإزالة الجير والتلميع" data-en="Teeth Whitening, Cleaning, Tartar Removal & Polishing Package">باقة تبييض وتنظيف الاسنان وإزالة الجير والتلميع</div>
                         <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
+                            <span class="offer-price" data-ar="526 ريال" data-en="526 SAR">526 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">تركيب تقويم الاسنان</div>
-                        <div class="service-desc">الدفعة الأولى</div>
+                        <div class="service-name" data-ar="تركيب تقويم الاسنان" data-en="Braces Installation">تركيب تقويم الاسنان</div>
+                        <div class="service-desc" data-ar="الدفعة الأولى" data-en="First payment">الدفعة الأولى</div>
                         <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
+                            <span class="offer-price" data-ar="526 ريال" data-en="526 SAR">526 ريال</span>
                         </div>
                     </div>
                     <div class="service-item">
-                        <div class="service-name">زراعة الاسنان</div>
+                        <div class="service-name" data-ar="زراعة الاسنان" data-en="Dental Implants">زراعة الاسنان</div>
                         <div class="price-container">
-                            <span class="offer-price">2026 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تركيب زيركون</div>
-                        <div class="price-container">
-                            <span class="offer-price">526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابتسامة 16 سن ثري دي</div>
-                        <div class="price-container">
-                            <span class="offer-price">7426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">ابتسامة 16 سن</div>
-                        <div class="price-container">
-                            <span class="offer-price">5426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">تبييض الاسنان</div>
-                        <div class="price-container">
-                            <span class="offer-price">426 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">الحشوات التجميلية</div>
-                        <div class="price-container">
-                            <span class="offer-price">تبدأ من 196 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">علاج العصب</div>
-                        <div class="price-container">
-                            <span class="offer-price">تبدأ من 526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">الخلع العادي</div>
-                        <div class="price-container">
-                            <span class="offer-price">تبدأ من 226 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">الخلع الجراحي</div>
-                        <div class="price-container">
-                            <span class="offer-price">تبدأ من 526 ريال</span>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-name">الفلورايد</div>
-                        <div class="price-container">
-                            <span class="offer-price">126 ريال</span>
+                            <span class="offer-price" data-ar="2026 ريال" data-en="2026 SAR">2026 ريال</span>
                         </div>
                     </div>
                 </div>
@@ -1073,28 +484,28 @@
         <div class="note-section">
             <div class="note-card">
                 <i class="fas fa-star note-icon"></i>
-                <p class="note-text">عروض محدودة لبداية 2026 - لا تفوت الفرصة</p>
+                <p class="note-text" data-ar="عروض محدودة لبداية 2025 - لا تفوت الفرصة" data-en="Limited offers for early 2025 - Don't miss out">عروض محدودة لبداية 2025 - لا تفوت الفرصة</p>
             </div>
         </div>
 
         <div class="contact-section">
-            <h3 class="contact-title">احجز موعدك الآن</h3>
+            <h3 class="contact-title" data-ar="احجز موعدك الآن" data-en="Book Your Appointment Now">احجز موعدك الآن</h3>
             <div class="contact-buttons">
                 <a href="tel:0547199970" class="contact-btn call-btn">
                     <i class="fas fa-phone"></i>
-                    <span>اتصل الآن</span>
+                    <span data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</span>
                     <span class="phone-number">0547199970</span>
                 </a>
                 <a href="https://wa.me/966547199970" target="_blank" class="contact-btn whatsapp-btn">
                     <i class="fab fa-whatsapp"></i>
-                    <span>واتساب</span>
+                    <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
                     <span class="phone-number">0547199970</span>
                 </a>
             </div>
         </div>
 
         <div class="social-section">
-            <h3 class="social-title">تابعونا على</h3>
+            <h3 class="social-title" data-ar="تابعونا على" data-en="Follow Us On">تابعونا على</h3>
             <div class="social-icons">
                 <a href="https://maps.app.goo.gl/XJWvSYfxTUGmDVRn9" target="_blank" class="social-icon">
                     <i class="fas fa-map-marker-alt"></i>
